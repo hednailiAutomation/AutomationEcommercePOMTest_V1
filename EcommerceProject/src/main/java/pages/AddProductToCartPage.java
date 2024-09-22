@@ -23,7 +23,6 @@ public class AddProductToCartPage {
 		driver.findElement(btn_addtocart).click();
 		driver.findElement(cart_link).click();
 		driver.findElement(checkout_btn).click();
-
 	}
 
 }

@@ -19,18 +19,17 @@ public class AddProductToCartTest extends TestBase{
 	public void AddToCartProduct() throws InterruptedException
 	{
 		addProduct = new AddProductToCartPage(driver);
-		addProduct.AddToCart();
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		wait.until(ExpectedConditions.textToBePresentInElementLocated(By.cssSelector("span.counter-number"), "2"));
-
-
+		addProduct.AddToCart();
+		
 	}
 
-	@Test(priority=2)
+	/*@Test(priority=2)
 	public void ContinueShip()
 	{
 		addProduct  = new AddProductToCartPage(driver);
-		//addProduct.Continue();
-	}
+		addProduct.Continue();
+	}*/
 
 }

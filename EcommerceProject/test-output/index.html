@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite, 4 failed tests</span>
+      <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -39,7 +39,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Suite" class="navigator-link">
-              <span class="suite-name border-failed">Suite</span>
+              <span class="suite-name border-passed">Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -92,36 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">15 methods, 4 failed,   11 passed</span>
-                  </li>
-                  <li>
-                    <span class="method-list-title failed">Failed methods</span>
-                    <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-Suite" class="hide-methods failed suite-Suite"> (hide)</a> <!-- hide-methods failed suite-Suite -->
-                      <a href="#" panel-name="suite-Suite" class="show-methods failed suite-Suite"> (show)</a> <!-- show-methods failed suite-Suite -->
-                    </span>
-                    <div class="method-list-content failed suite-Suite">
-                      <span>
-                        <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="tests.AddProductToCartTest" class="method navigator-link" hash-for-method="AddToCartProduct">AddToCartProduct</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="tests.ProductOrderTest" class="method navigator-link" hash-for-method="EditShipping">EditShipping</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="tests.ProductOrderTest" class="method navigator-link" hash-for-method="FinishShipping">FinishShipping</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="tests.ProductOrderTest" class="method navigator-link" hash-for-method="Login">Login</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                    </div> <!-- method-list-content failed suite-Suite -->
+                    <span class="method-stats">14 methods,   14 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -130,6 +101,11 @@
                       <a href="#" panel-name="suite-Suite" class="show-methods passed suite-Suite"> (show)</a> <!-- show-methods passed suite-Suite -->
                     </span>
                     <div class="method-list-content passed suite-Suite">
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="tests.AddProductToCartTest" class="method navigator-link" hash-for-method="AddToCartProduct">AddToCartProduct</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Suite" title="tests.RegistrationTest" class="method navigator-link" hash-for-method="ChangePassword">ChangePassword</a> <!-- method navigator-link -->
@@ -142,12 +118,17 @@
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="tests.AddProductToCartTest" class="method navigator-link" hash-for-method="ContinueShip">ContinueShip</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="tests.ProductOrderTest" class="method navigator-link" hash-for-method="EditShipping">EditShipping</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Suite" title="tests.LoginTest" class="method navigator-link" hash-for-method="EmptyCredentialsLogin">EmptyCredentialsLogin</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="tests.ProductOrderTest" class="method navigator-link" hash-for-method="FinishShipping">FinishShipping</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -158,6 +139,11 @@
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Suite" title="tests.LoginTest" class="method navigator-link" hash-for-method="InvalidPasswordLogin">InvalidPasswordLogin</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="tests.ProductOrderTest" class="method navigator-link" hash-for-method="Login">Login</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -197,138 +183,6 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Suite" class="panel Suite">
-          <div class="suite-Suite-class-failed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
-              <span class="class-name">tests.AddProductToCartTest</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="AddToCartProduct">
-                  </a> <!-- AddToCartProduct -->
-                  <span class="method-name">AddToCartProduct</span>
-                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;#top\-cart\-btn\-checkout&quot;}
-  (Session info: chrome=129.0.6668.58)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: &apos;4.15.0&apos;, revision: &apos;1d14b5521b&apos;
-System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.24&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [bc68db77946b9025b6cbddcb2d4b4a50, findElement {using=id, value=top-cart-btn-checkout}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 129.0.6668.58, chrome: {chromedriverVersion: 129.0.6668.58 (81a06fb873a9..., userDataDir: C:\Users\hedi\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50841}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50841/devtoo..., se:cdpVersion: 129.0.6668.58, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: bc68db77946b9025b6cbddcb2d4b4a50
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:607)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:364)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:358)
-	at pages.AddProductToCartPage.AddToCart(AddProductToCartPage.java:25)
-	at tests.AddProductToCartTest.AddToCartProduct(AddProductToCartTest.java:22)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
-... Removed 31 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-failed -->
-          <div class="suite-Suite-class-failed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
-              <span class="class-name">tests.ProductOrderTest</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="EditShipping">
-                  </a> <!-- EditShipping -->
-                  <span class="method-name">EditShipping</span>
-                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//form[@id=&apos;co-shipping-form&apos;]/descendant::input[3]&quot;}
-  (Session info: chrome=129.0.6668.58)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: &apos;4.15.0&apos;, revision: &apos;1d14b5521b&apos;
-System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.24&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [bc68db77946b9025b6cbddcb2d4b4a50, findElement {using=xpath, value=//form[@id=&apos;co-shipping-form&apos;]/descendant::input[3]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 129.0.6668.58, chrome: {chromedriverVersion: 129.0.6668.58 (81a06fb873a9..., userDataDir: C:\Users\hedi\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50841}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50841/devtoo..., se:cdpVersion: 129.0.6668.58, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: bc68db77946b9025b6cbddcb2d4b4a50
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:607)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:364)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:358)
-	at pages.ProductOrderPage.CheckCart(ProductOrderPage.java:57)
-	at tests.ProductOrderTest.EditShipping(ProductOrderTest.java:27)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
-... Removed 31 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="FinishShipping">
-                  </a> <!-- FinishShipping -->
-                  <span class="method-name">FinishShipping</span>
-                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//form[@id=&apos;co-payment-form&apos;]/descendant::button[@title=&apos;Place Order&apos;]&quot;}
-  (Session info: chrome=129.0.6668.58)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: &apos;4.15.0&apos;, revision: &apos;1d14b5521b&apos;
-System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.24&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [bc68db77946b9025b6cbddcb2d4b4a50, findElement {using=xpath, value=//form[@id=&apos;co-payment-form&apos;]/descendant::button[@title=&apos;Place Order&apos;]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 129.0.6668.58, chrome: {chromedriverVersion: 129.0.6668.58 (81a06fb873a9..., userDataDir: C:\Users\hedi\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50841}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50841/devtoo..., se:cdpVersion: 129.0.6668.58, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: bc68db77946b9025b6cbddcb2d4b4a50
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:607)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:364)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:358)
-	at pages.ProductOrderPage.placeOlderShipping(ProductOrderPage.java:91)
-	at tests.ProductOrderTest.FinishShipping(ProductOrderTest.java:37)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
-... Removed 31 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="Login">
-                  </a> <!-- Login -->
-                  <span class="method-name">Login</span>
-                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //form[@class=&apos;form form-login&apos;]/descendant::input[1] (tried for 10 second(s) with 500 milliseconds interval)
-Build info: version: &apos;4.15.0&apos;, revision: &apos;1d14b5521b&apos;
-System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.24&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 129.0.6668.58, chrome: {chromedriverVersion: 129.0.6668.58 (81a06fb873a9..., userDataDir: C:\Users\hedi\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50841}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50841/devtoo..., se:cdpVersion: 129.0.6668.58, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: bc68db77946b9025b6cbddcb2d4b4a50
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:229)
-	at pages.ProductOrderPage.Login(ProductOrderPage.java:48)
-	at tests.ProductOrderTest.Login(ProductOrderTest.java:18)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
-... Removed 27 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-failed -->
           <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -366,9 +220,38 @@ Session ID: bc68db77946b9025b6cbddcb2d4b4a50
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="ContinueShip">
-                  </a> <!-- ContinueShip -->
-                  <span class="method-name">ContinueShip</span>
+                  <a name="AddToCartProduct">
+                  </a> <!-- AddToCartProduct -->
+                  <span class="method-name">AddToCartProduct</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">tests.ProductOrderTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="EditShipping">
+                  </a> <!-- EditShipping -->
+                  <span class="method-name">EditShipping</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="FinishShipping">
+                  </a> <!-- FinishShipping -->
+                  <span class="method-name">FinishShipping</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="Login">
+                  </a> <!-- Login -->
+                  <span class="method-name">Login</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -453,7 +336,6 @@ Session ID: bc68db77946b9025b6cbddcb2d4b4a50
       &lt;class name=&quot;tests.RegistrationTest&quot;/&gt;
       &lt;class name=&quot;tests.LoginTest&quot;/&gt;
       &lt;class name=&quot;tests.ProductSearchTest&quot;/&gt;
-      &lt;class name=&quot;tests.ProductSearchTest&quot;/&gt;
       &lt;class name=&quot;tests.AddProductToCartTest&quot;/&gt;
       &lt;class name=&quot;tests.ProductOrderTest&quot;/&gt;
     &lt;/classes&gt;
@@ -469,7 +351,7 @@ Session ID: bc68db77946b9025b6cbddcb2d4b4a50
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">testng (6 classes)</span>
+                <span class="test-name">testng (5 classes)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -495,67 +377,63 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(15);
+data.addRows(14);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'Login')
+data.setCell(0, 1, 'FinishShipping')
 data.setCell(0, 2, 'tests.ProductOrderTest')
-data.setCell(0, 3, 10334);
+data.setCell(0, 3, 16328);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'FinishShipping')
+data.setCell(1, 1, 'Login')
 data.setCell(1, 2, 'tests.ProductOrderTest')
-data.setCell(1, 3, 8042);
+data.setCell(1, 3, 15603);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'ValidCredentialsLogin')
-data.setCell(2, 2, 'tests.LoginTest')
-data.setCell(2, 3, 7411);
+data.setCell(2, 1, 'EditShipping')
+data.setCell(2, 2, 'tests.ProductOrderTest')
+data.setCell(2, 3, 10592);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'InvalidPasswordLogin')
-data.setCell(3, 2, 'tests.LoginTest')
-data.setCell(3, 3, 7297);
+data.setCell(3, 1, 'Registration')
+data.setCell(3, 2, 'tests.RegistrationTest')
+data.setCell(3, 3, 7447);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'Registration')
-data.setCell(4, 2, 'tests.RegistrationTest')
-data.setCell(4, 3, 7154);
+data.setCell(4, 1, 'ValidCredentialsLogin')
+data.setCell(4, 2, 'tests.LoginTest')
+data.setCell(4, 3, 6990);
 data.setCell(5, 0, 5)
-data.setCell(5, 1, 'ChangePassword')
-data.setCell(5, 2, 'tests.RegistrationTest')
-data.setCell(5, 3, 6706);
+data.setCell(5, 1, 'InvalidPasswordLogin')
+data.setCell(5, 2, 'tests.LoginTest')
+data.setCell(5, 3, 6550);
 data.setCell(6, 0, 6)
 data.setCell(6, 1, 'SignOut')
 data.setCell(6, 2, 'tests.LoginTest')
-data.setCell(6, 3, 6623);
+data.setCell(6, 3, 6422);
 data.setCell(7, 0, 7)
-data.setCell(7, 1, 'InvalidEmailLogin')
-data.setCell(7, 2, 'tests.LoginTest')
-data.setCell(7, 3, 3995);
+data.setCell(7, 1, 'ChangePassword')
+data.setCell(7, 2, 'tests.RegistrationTest')
+data.setCell(7, 3, 5240);
 data.setCell(8, 0, 8)
-data.setCell(8, 1, 'SearchProduct')
-data.setCell(8, 2, 'tests.ProductSearchTest')
-data.setCell(8, 3, 3359);
+data.setCell(8, 1, 'AddToCartProduct')
+data.setCell(8, 2, 'tests.AddProductToCartTest')
+data.setCell(8, 3, 3642);
 data.setCell(9, 0, 9)
-data.setCell(9, 1, 'ChooseProduct')
+data.setCell(9, 1, 'SortProduct')
 data.setCell(9, 2, 'tests.ProductSearchTest')
-data.setCell(9, 3, 2919);
+data.setCell(9, 3, 3297);
 data.setCell(10, 0, 10)
-data.setCell(10, 1, 'SortProduct')
+data.setCell(10, 1, 'ChooseProduct')
 data.setCell(10, 2, 'tests.ProductSearchTest')
-data.setCell(10, 3, 1830);
+data.setCell(10, 3, 2955);
 data.setCell(11, 0, 11)
-data.setCell(11, 1, 'EmptyCredentialsLogin')
-data.setCell(11, 2, 'tests.LoginTest')
-data.setCell(11, 3, 1726);
+data.setCell(11, 1, 'SearchProduct')
+data.setCell(11, 2, 'tests.ProductSearchTest')
+data.setCell(11, 3, 2296);
 data.setCell(12, 0, 12)
-data.setCell(12, 1, 'AddToCartProduct')
-data.setCell(12, 2, 'tests.AddProductToCartTest')
-data.setCell(12, 3, 1331);
+data.setCell(12, 1, 'InvalidEmailLogin')
+data.setCell(12, 2, 'tests.LoginTest')
+data.setCell(12, 3, 2279);
 data.setCell(13, 0, 13)
-data.setCell(13, 1, 'EditShipping')
-data.setCell(13, 2, 'tests.ProductOrderTest')
-data.setCell(13, 3, 1068);
-data.setCell(14, 0, 14)
-data.setCell(14, 1, 'ContinueShip')
-data.setCell(14, 2, 'tests.AddProductToCartTest')
-data.setCell(14, 3, 4);
+data.setCell(13, 1, 'EmptyCredentialsLogin')
+data.setCell(13, 2, 'tests.LoginTest')
+data.setCell(13, 3, 1651);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
@@ -581,9 +459,9 @@ return data;
             <div class="ignored-class-div">
               <span class="ignored-class-name">tests.ProductSearchTest</span>
               <div class="ignored-methods-div">
-                <span class="ignored-method-name">tearDown</span>
-                <br/>
                 <span class="ignored-method-name">StartDriver</span>
+                <br/>
+                <span class="ignored-method-name">tearDown</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
@@ -599,9 +477,9 @@ return data;
             <div class="ignored-class-div">
               <span class="ignored-class-name">tests.ProductOrderTest</span>
               <div class="ignored-methods-div">
-                <span class="ignored-method-name">StartDriver</span>
-                <br/>
                 <span class="ignored-method-name">tearDown</span>
+                <br/>
+                <span class="ignored-method-name">StartDriver</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
@@ -629,90 +507,78 @@ return data;
               </div> <!-- configuration-suite before -->
               <div class="test-method">
                 <span class="method-name">Registration</span>
-                <span class="method-start">16391 ms</span>
+                <span class="method-start">11424 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">ChangePassword</span>
-                <span class="method-start">23554 ms</span>
+                <span class="method-start">18879 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">tests.LoginTest</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">InvalidEmailLogin</span>
-                <span class="method-start">30279 ms</span>
+                <span class="method-start">24137 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">InvalidPasswordLogin</span>
-                <span class="method-start">34278 ms</span>
+                <span class="method-start">26419 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">EmptyCredentialsLogin</span>
-                <span class="method-start">41578 ms</span>
+                <span class="method-start">32973 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">ValidCredentialsLogin</span>
-                <span class="method-start">43308 ms</span>
+                <span class="method-start">34628 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">SignOut</span>
-                <span class="method-start">50722 ms</span>
+                <span class="method-start">41622 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">tests.ProductSearchTest</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">SearchProduct</span>
-                <span class="method-start">57367 ms</span>
+                <span class="method-start">48060 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">SortProduct</span>
-                <span class="method-start">60731 ms</span>
+                <span class="method-start">50364 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">ChooseProduct</span>
-                <span class="method-start">62564 ms</span>
+                <span class="method-start">53666 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">tests.AddProductToCartTest</div> <!-- chronological-class-name -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
                 <span class="method-name">AddToCartProduct</span>
-                <span class="method-start">65486 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">ContinueShip</span>
-                <span class="method-start">66825 ms</span>
+                <span class="method-start">56623 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">tests.ProductOrderTest</div> <!-- chronological-class-name -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
                 <span class="method-name">Login</span>
-                <span class="method-start">66833 ms</span>
+                <span class="method-start">60278 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
                 <span class="method-name">EditShipping</span>
-                <span class="method-start">77171 ms</span>
+                <span class="method-start">75884 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
                 <span class="method-name">FinishShipping</span>
-                <span class="method-start">78245 ms</span>
+                <span class="method-start">86480 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">tests.RegistrationTest</div> <!-- chronological-class-name -->
               <div class="configuration-suite after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">86390 ms</span>
+                <span class="method-start">102854 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
