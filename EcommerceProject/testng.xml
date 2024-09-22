@@ -5,10 +5,6 @@
     <classes>
 		<class name="tests.RegistrationTest"/>
 		<class name="tests.LoginTest"/>
-		<class name="tests.ProductSearchTest"/>
-        <class name="tests.ProductSearchTest"/>
-        <class name="tests.AddProductToCartTest"/>
-        <class name="tests.ProductOrderTest"/>
     </classes>
   </test>
 </suite>

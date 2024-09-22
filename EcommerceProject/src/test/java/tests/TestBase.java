@@ -22,7 +22,6 @@ public class TestBase {
 		WebDriverManager.chromedriver().setup();
 		driver= new ChromeDriver(options);
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(1));
-		//driver.get("https://magento.softwaretestingboard.com/");
 		driver.get("https://magento.softwaretestingboard.com/checkout/#shipping");
 		driver.manage().window().maximize();
 	}

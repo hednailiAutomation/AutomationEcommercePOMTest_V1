@@ -15,18 +15,16 @@ public class LoginTest extends TestBase{
 	LoginPage lp ;
 	String invalidEmail = "123@";
 	String invalidPwd = "1234";
-	String email = "test.myppaz998125@gmail.com";
+	String email = "test.mypaze099@gmail.com";
 	String pwd = "123456Ab.";
+	String newpwd  ="123456aB.";
 
 
 	@Test(priority=1)
 	void  InvalidEmailLogin() throws InterruptedException
 	{
 		lp=new LoginPage(driver);
-		lp.login();
-		lp.InvalidEmail(invalidEmail);
-		lp.InvalidPassword(invalidPwd);
-		lp.Login();
+		lp.login(invalidEmail,pwd);
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(2));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("send2")));
 		Assert.assertTrue(driver.findElement(By.id("email-error")).isDisplayed());
@@ -36,10 +34,7 @@ public class LoginTest extends TestBase{
 	void  InvalidPasswordLogin() throws InterruptedException
 	{
 		lp=new LoginPage(driver);
-		lp.login();
-		lp.ValidEmail(email);
-		lp.InvalidPassword(invalidPwd);
-		lp.Login();
+		lp.login(email,invalidPwd);
 		Thread.sleep(3000);
 		Assert.assertTrue(driver.findElement(By.xpath("//*[@id=\"maincontent\"]/div[2]/div[2]/div/div")).isDisplayed());
 	}
@@ -48,10 +43,7 @@ public class LoginTest extends TestBase{
 	void EmptyCredentialsLogin()
 	{
 		lp= new LoginPage(driver);
-		lp.login();
-		lp.InvalidEmail("");
-		lp.InvalidPassword("");
-		lp.Login();
+		lp.login("","");
 		Assert.assertTrue(driver.findElement(By.id("email-error")).isDisplayed());
 	}
 
@@ -59,13 +51,17 @@ public class LoginTest extends TestBase{
 	void ValidCredentialsLogin() throws InterruptedException
 	{
 		lp = new LoginPage(driver);
-		lp.login();
-		lp.ValidEmail(email);
-		lp.ValidPassword(pwd);
-		lp.Login();
+		lp.login(email,newpwd);
 		Thread.sleep(3000);
 		Assert.assertTrue(driver.findElement(By.className("logged-in")).isDisplayed());
 	}
-
+	
+	@Test
+	void SignOut() 
+	{
+		lp = new LoginPage(driver);
+		lp.Signout();
+	}
+	
 }
 
