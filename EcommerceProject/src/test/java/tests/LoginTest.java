@@ -15,7 +15,7 @@ public class LoginTest extends TestBase{
 	LoginPage lp ;
 	String invalidEmail = "123@";
 	String invalidPwd = "1234";
-	String email = "test.mypaze099@gmail.com";
+	String email = "test.mypaze699@gmail.com";
 	String pwd = "123456Ab.";
 	String newpwd  ="123456aB.";
 
@@ -56,10 +56,11 @@ public class LoginTest extends TestBase{
 		Assert.assertTrue(driver.findElement(By.className("logged-in")).isDisplayed());
 	}
 	
-	@Test
-	void SignOut() 
+	@Test(priority=5)
+	void SignOut() throws InterruptedException 
 	{
 		lp = new LoginPage(driver);
+		Thread.sleep(5000);
 		lp.Signout();
 	}
 	
