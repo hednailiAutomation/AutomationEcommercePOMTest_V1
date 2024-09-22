@@ -1,0 +1,38 @@
+package tests;
+
+import org.testng.annotations.Test;
+
+import pages.ProductOrderPage;
+
+public class ProductOrderTest extends TestBase{
+
+	ProductOrderPage po ;
+
+
+	@Test(priority=1)
+	public void login() throws InterruptedException 
+	{
+		po= new  ProductOrderPage(driver);
+		po.Login("test.myppaz995@gmail.com", "123456aB.");
+		Thread.sleep(10000);
+	}
+
+	
+	@Test(priority=2)
+	public void Shipping() throws InterruptedException
+	{
+		po = new ProductOrderPage(driver);
+		po.CheckCart("coding","Republic","21","Street","Texas","Paris");
+		po.Zip("43567");
+		po.CountrySelect();
+		po.ContinueShipping("12345678");
+	}
+	
+	@Test(priority=3)
+	public void printTheReceipt() throws InterruptedException 
+	{
+		po= new ProductOrderPage(driver);
+		po.placeOlderShipping();
+		po.printReceipt();
+	}
+}

@@ -1,0 +1,16 @@
+2024-09-21 18:45:20,239 [Worker-4: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2024-09-21 18:47:44,331 [Worker-1: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2024-09-21 18:49:19,467 [Worker-6: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: PageObjectModel:Project:0.0.1-SNAPSHOT @ C:\Users\hedi\eclipse-workspace\EcommerceProject\bin\pom.xml.
+2024-09-21 18:49:28,538 [Worker-6: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\hedi\eclipse-workspace\EcommerceProject\bin\src\main\resources
+2024-09-21 18:49:28,547 [Worker-6: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\hedi\eclipse-workspace\EcommerceProject\bin\src\test\resources
+2024-09-21 18:49:29,658 [Worker-14: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\hedi\eclipse-workspace\EcommerceProject\bin\src\main\resources
+2024-09-21 18:49:29,663 [Worker-14: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\hedi\eclipse-workspace\EcommerceProject\bin\src\test\resources
+2024-09-21 18:49:38,912 [Worker-7: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\hedi\eclipse-workspace\EcommerceProject\bin\src\main\resources
+2024-09-21 18:49:38,921 [Worker-7: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\hedi\eclipse-workspace\EcommerceProject\bin\src\test\resources
+2024-09-21 18:49:49,311 [Worker-6: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\hedi\eclipse-workspace\EcommerceProject\bin\src\main\resources
+2024-09-21 18:49:49,318 [Worker-6: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\hedi\eclipse-workspace\EcommerceProject\bin\src\test\resources
+2024-09-21 18:50:06,712 [Worker-14: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\hedi\eclipse-workspace\EcommerceProject\bin\src\main\resources
+2024-09-21 18:50:06,720 [Worker-14: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\hedi\eclipse-workspace\EcommerceProject\bin\src\test\resources
+2024-09-21 18:50:20,154 [Worker-2: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\hedi\eclipse-workspace\EcommerceProject\bin\src\main\resources
+2024-09-21 18:50:20,173 [Worker-2: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\hedi\eclipse-workspace\EcommerceProject\bin\src\test\resources
+2024-09-22 09:54:50,394 [Worker-2: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
