@@ -15,7 +15,7 @@ public class LoginTest extends TestBase{
 	LoginPage lp ;
 	String invalidEmail = "123@";
 	String invalidPwd = "1234";
-	String email = "test.mypaze699@gmail.com";
+	String email = "test.myppaz998135@gmail.com";
 	String pwd = "123456Ab.";
 	String newpwd  ="123456aB.";
 

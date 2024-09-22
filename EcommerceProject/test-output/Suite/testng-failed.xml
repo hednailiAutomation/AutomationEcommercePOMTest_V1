@@ -3,13 +3,22 @@
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="testng(failed)">
     <classes>
-      <class name="tests.LoginTest">
+      <class name="tests.AddProductToCartTest">
         <methods>
-          <include name="SignOut"/>
           <include name="tearDown"/>
+          <include name="AddToCartProduct"/>
           <include name="StartDriver"/>
         </methods>
-      </class> <!-- tests.LoginTest -->
+      </class> <!-- tests.AddProductToCartTest -->
+      <class name="tests.ProductOrderTest">
+        <methods>
+          <include name="FinishShipping"/>
+          <include name="EditShipping"/>
+          <include name="tearDown"/>
+          <include name="Login"/>
+          <include name="StartDriver"/>
+        </methods>
+      </class> <!-- tests.ProductOrderTest -->
     </classes>
   </test> <!-- testng(failed) -->
 </suite> <!-- Failed suite [Suite] -->

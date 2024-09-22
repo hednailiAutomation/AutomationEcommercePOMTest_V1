@@ -1,5 +1,4 @@
 package tests;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.testng.annotations.Test;
@@ -14,17 +13,18 @@ public class ProductSearchTest extends TestBase {
 	LoginPage lp;
 	String productName = "Jacket";
 	String nbr= "2";
-	String email = "test.myppaz998125@gmail.com";
+	String email = "test.myppaz998135@gmail.com";
 	String newpwd = "123456aB.";
+	String qty = "2";
 
 
 
 
 	@Test(priority=1)
-	void SearchForProduct()
+	void SearchProduct()
 	{
-			ps = new ProductSearchPage(driver);
-			ps.SearchProduct(productName);
+		ps = new ProductSearchPage(driver);
+		ps.SearchForProduct(productName);
 	}
 
 	@Test(priority=2)
@@ -39,8 +39,8 @@ public class ProductSearchTest extends TestBase {
 	{
 		ps =new ProductSearchPage(driver);
 		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("window.scrollBy(0, 1000);");
-		ps.ChooseProduct(nbr);
+		js.executeScript("window.scrollBy(0, 1000)");
+		ps.ChooseProduct(qty);
 		Assert.assertTrue(driver.findElement(By.className("swatch-attribute-selected-option")).isDisplayed());
 	}
 }
