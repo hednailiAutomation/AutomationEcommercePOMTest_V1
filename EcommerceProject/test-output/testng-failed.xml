@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="testng(failed)">
+    <classes>
+      <class name="tests.ProductSearchTest">
+        <methods>
+          <include name="ChooseProduct"/>
+          <include name="tearDown"/>
+          <include name="SearchProduct"/>
+          <include name="SortProduct"/>
+          <include name="StartDriver"/>
+        </methods>
+      </class> <!-- tests.ProductSearchTest -->
+      <class name="tests.AddProductToCartTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="AddToCartProduct"/>
+          <include name="StartDriver"/>
+        </methods>
+      </class> <!-- tests.AddProductToCartTest -->
+      <class name="tests.ProductOrderTest">
+        <methods>
+          <include name="EditShipping"/>
+          <include name="FinishShipping"/>
+          <include name="tearDown"/>
+          <include name="Login"/>
+          <include name="StartDriver"/>
+        </methods>
+      </class> <!-- tests.ProductOrderTest -->
+      <class name="tests.RegistrationTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="ChangePassword"/>
+          <include name="StartDriver"/>
+          <include name="Registration"/>
+        </methods>
+      </class> <!-- tests.RegistrationTest -->
+      <class name="tests.LoginTest">
+        <methods>
+          <include name="SignOut"/>
+          <include name="ValidCredentialsLogin"/>
+          <include name="EmptyCredentialsLogin"/>
+          <include name="InvalidEmailLogin"/>
+          <include name="InvalidPasswordLogin"/>
+          <include name="tearDown"/>
+          <include name="StartDriver"/>
+        </methods>
+      </class> <!-- tests.LoginTest -->
+    </classes>
+  </test> <!-- testng(failed) -->
+</suite> <!-- Failed suite [Suite] -->

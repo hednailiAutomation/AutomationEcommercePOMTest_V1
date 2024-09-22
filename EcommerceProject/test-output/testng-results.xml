@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="14" passed="14" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-09-22T22:41:36 GMT+01:00" name="Suite" finished-at="2024-09-22T22:43:07 GMT+01:00" duration-ms="91474">
+    <groups>
+    </groups>
+    <test started-at="2024-09-22T22:41:36 GMT+01:00" name="testng" finished-at="2024-09-22T22:43:07 GMT+01:00" duration-ms="91474">
+      <class name="tests.LoginTest">
+        <test-method signature="InvalidEmailLogin()[pri:1, instance:tests.LoginTest@5e2c3d18]" started-at="2024-09-22T22:41:49 GMT+01:00" name="InvalidEmailLogin" finished-at="2024-09-22T22:41:51 GMT+01:00" duration-ms="2279" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- InvalidEmailLogin -->
+        <test-method signature="InvalidPasswordLogin()[pri:2, instance:tests.LoginTest@5e2c3d18]" started-at="2024-09-22T22:41:51 GMT+01:00" name="InvalidPasswordLogin" finished-at="2024-09-22T22:41:57 GMT+01:00" duration-ms="6550" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- InvalidPasswordLogin -->
+        <test-method signature="EmptyCredentialsLogin()[pri:3, instance:tests.LoginTest@5e2c3d18]" started-at="2024-09-22T22:41:57 GMT+01:00" name="EmptyCredentialsLogin" finished-at="2024-09-22T22:41:59 GMT+01:00" duration-ms="1651" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- EmptyCredentialsLogin -->
+        <test-method signature="ValidCredentialsLogin()[pri:4, instance:tests.LoginTest@5e2c3d18]" started-at="2024-09-22T22:41:59 GMT+01:00" name="ValidCredentialsLogin" finished-at="2024-09-22T22:42:06 GMT+01:00" duration-ms="6990" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ValidCredentialsLogin -->
+        <test-method signature="SignOut()[pri:5, instance:tests.LoginTest@5e2c3d18]" started-at="2024-09-22T22:42:06 GMT+01:00" name="SignOut" finished-at="2024-09-22T22:42:12 GMT+01:00" duration-ms="6422" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SignOut -->
+      </class> <!-- tests.LoginTest -->
+      <class name="tests.ProductOrderTest">
+        <test-method signature="Login()[pri:1, instance:tests.ProductOrderTest@5b218417]" started-at="2024-09-22T22:42:25 GMT+01:00" name="Login" finished-at="2024-09-22T22:42:40 GMT+01:00" duration-ms="15603" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Login -->
+        <test-method signature="EditShipping()[pri:2, instance:tests.ProductOrderTest@5b218417]" started-at="2024-09-22T22:42:40 GMT+01:00" name="EditShipping" finished-at="2024-09-22T22:42:51 GMT+01:00" duration-ms="10592" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- EditShipping -->
+        <test-method signature="FinishShipping()[pri:3, instance:tests.ProductOrderTest@5b218417]" started-at="2024-09-22T22:42:51 GMT+01:00" name="FinishShipping" finished-at="2024-09-22T22:43:07 GMT+01:00" duration-ms="16328" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- FinishShipping -->
+      </class> <!-- tests.ProductOrderTest -->
+      <class name="tests.AddProductToCartTest">
+        <test-method signature="AddToCartProduct()[pri:1, instance:tests.AddProductToCartTest@cc43f62]" started-at="2024-09-22T22:42:21 GMT+01:00" name="AddToCartProduct" finished-at="2024-09-22T22:42:25 GMT+01:00" duration-ms="3642" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AddToCartProduct -->
+      </class> <!-- tests.AddProductToCartTest -->
+      <class name="tests.ProductSearchTest">
+        <test-method signature="SearchProduct()[pri:1, instance:tests.ProductSearchTest@2cb4893b]" started-at="2024-09-22T22:42:13 GMT+01:00" name="SearchProduct" finished-at="2024-09-22T22:42:15 GMT+01:00" duration-ms="2296" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SearchProduct -->
+        <test-method signature="SortProduct()[pri:2, instance:tests.ProductSearchTest@2cb4893b]" started-at="2024-09-22T22:42:15 GMT+01:00" name="SortProduct" finished-at="2024-09-22T22:42:18 GMT+01:00" duration-ms="3297" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SortProduct -->
+        <test-method signature="ChooseProduct()[pri:3, instance:tests.ProductSearchTest@2cb4893b]" started-at="2024-09-22T22:42:18 GMT+01:00" name="ChooseProduct" finished-at="2024-09-22T22:42:21 GMT+01:00" duration-ms="2955" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ChooseProduct -->
+      </class> <!-- tests.ProductSearchTest -->
+      <class name="tests.RegistrationTest">
+        <test-method is-config="true" signature="StartDriver()[pri:0, instance:tests.RegistrationTest@5afa3c9]" started-at="2024-09-22T22:41:24 GMT+01:00" name="StartDriver" finished-at="2024-09-22T22:41:36 GMT+01:00" duration-ms="11332" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- StartDriver -->
+        <test-method signature="Registration()[pri:1, instance:tests.RegistrationTest@5afa3c9]" started-at="2024-09-22T22:41:36 GMT+01:00" name="Registration" finished-at="2024-09-22T22:41:43 GMT+01:00" duration-ms="7447" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Registration -->
+        <test-method signature="ChangePassword()[pri:2, instance:tests.RegistrationTest@5afa3c9]" started-at="2024-09-22T22:41:43 GMT+01:00" name="ChangePassword" finished-at="2024-09-22T22:41:49 GMT+01:00" duration-ms="5240" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ChangePassword -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.RegistrationTest@5afa3c9]" started-at="2024-09-22T22:43:07 GMT+01:00" name="tearDown" finished-at="2024-09-22T22:43:08 GMT+01:00" duration-ms="574" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- tests.RegistrationTest -->
+    </test> <!-- testng -->
+  </suite> <!-- Suite -->
+</testng-results>
