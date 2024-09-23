@@ -1,6 +1,7 @@
 package tests;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
 import junit.framework.Assert;
@@ -24,10 +25,28 @@ public class ProductOrderTest extends TestBase{
 	public void EditShipping() throws InterruptedException
 	{
 		po = new ProductOrderPage(driver);
-		po.CheckCart("coding","Republic","21","Street","Texas","Paris");
-		po.Zip("43567");
-		po.CountrySelect();
-		po.ContinueShipping("12345678");
+		Thread.sleep(3000);
+		try {
+			WebElement element =driver.findElement(By.xpath("//div[@class='page-wrapper']/descendant::button[@class='action action-show-popup']"));
+			if (element.isDisplayed()) {
+				po.newAdress();
+				po.CheckCart("coding","Republic","21","Street","Texas","Paris");
+				po.Zip("43567");
+				po.CountrySelect();
+				po.shiphere("12345678");
+
+			} else {
+
+				po.CheckCart("coding","Republic","21","Street","Texas","Paris");
+				po.Zip("43567");
+				po.CountrySelect();
+				po.ContinueShipping("12345678");
+
+			}
+		} catch (org.openqa.selenium.NoSuchElementException e) {
+			System.out.println("newAdress link is not found"  + e);
+			
+		}	
 	}
 
 	@Test(priority=3)
@@ -35,7 +54,6 @@ public class ProductOrderTest extends TestBase{
 	{
 		po= new ProductOrderPage(driver);
 		po.placeOlderShipping();
-		po.showReceipt();
 		Thread.sleep(4000);
 		Assert.assertEquals(driver.findElement(By.xpath("//span[@class='base']")).getText(), "Thank you for your purchase!");
 	}

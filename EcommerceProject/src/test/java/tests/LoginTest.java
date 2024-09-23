@@ -15,7 +15,7 @@ public class LoginTest extends TestBase{
 	LoginPage lp ;
 	String invalidEmail = "123@";
 	String invalidPwd = "1234";
-	String email = "test.myppaz998435@gmail.com";
+	String email = "test.myppBaz998467@gmail.com";
 	String pwd = "123456Ab.";
 	String newpwd  ="123456aB.";
 
@@ -60,7 +60,7 @@ public class LoginTest extends TestBase{
 	void SignOut() throws InterruptedException 
 	{
 		lp = new LoginPage(driver);
-		Thread.sleep(5000);
+		Thread.sleep(2000);
 		lp.Signout();
 	}
 	

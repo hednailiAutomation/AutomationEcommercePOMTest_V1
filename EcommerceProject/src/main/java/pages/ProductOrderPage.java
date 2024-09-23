@@ -35,9 +35,11 @@ public class ProductOrderPage {
 	By phone_txt = By.xpath("//form[@id='co-shipping-form']/descendant::input[10]");
 	By shipMethod_btn = By.xpath("//form[@id='co-shipping-form']/descendant::input[11]");
 	By next_btn = By.xpath("//form[@id='co-shipping-method-form']/descendant::button[@class='button action continue primary']");
+	By btn_shiphere = By.xpath("//footer[@class='modal-footer']/descendant::button[@class='action primary action-save-address']");
+	By btn_next = By.xpath("//div[@id='shipping-method-buttons-container']/descendant::button[@class='button action continue primary']");
 	By placeolder_btn = By.xpath("//form[@id='co-payment-form']/descendant::button[@title='Place Order']");
 	By receiptprint_link = By.xpath("//a[@class='action print']");
-	By newAdress_link = By.xpath("//form[@id='co-shipping-form']/descendant::div[@id='shipping-new-address-form']");
+	By newAdress_link = By.xpath("//div[@class='page-wrapper']/descendant::button[@class='action action-show-popup']");
 	By print_btn  = By.className("action-button");
 	By pdf_select = By.xpath("//*[@id=\"destinationSelect\"]//print-preview-settings-section/div/select");
 
@@ -52,6 +54,13 @@ public class ProductOrderPage {
 		driver.findElement(login_btn).click();
 
 	}
+	
+	public void newAdress() 
+	{
+		driver.findElement(newAdress_link).click();
+		
+	}
+	
 	public void CheckCart(String company ,String street,String street2,String street3 ,String city, String province) throws InterruptedException
 	{
 		driver.findElement(company_txt).sendKeys(company);
@@ -83,6 +92,15 @@ public class ProductOrderPage {
 		Thread.sleep(3000);
 		//driver.findElement(shipMethod_btn).click();
 		driver.findElement(next_btn).click();
+	}
+	
+	public void shiphere(String phone) throws InterruptedException 
+	{
+		driver.findElement(phone_txt).sendKeys(phone);
+		Thread.sleep(3000);
+		driver.findElement(btn_shiphere).click();
+		Thread.sleep(3000);
+		driver.findElement(btn_next).click();
 	}
 
 	public void placeOlderShipping () throws InterruptedException

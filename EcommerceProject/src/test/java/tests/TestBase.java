@@ -22,7 +22,7 @@ public class TestBase {
 		WebDriverManager.chromedriver().setup();
 		driver= new ChromeDriver(options);
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(1));
-		driver.get("https://magento.softwaretestingboard.com/checkout/#shipping");
+		driver.get("https://magento.softwaretestingboard.com");
 		driver.manage().window().maximize();
 	}
 
@@ -30,6 +30,6 @@ public class TestBase {
 	@AfterSuite
 	public void tearDown()
 	{
-		driver.quit();
+		//driver.quit();
 	}
 }

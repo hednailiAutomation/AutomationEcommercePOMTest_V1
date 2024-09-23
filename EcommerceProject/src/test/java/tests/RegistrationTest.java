@@ -14,9 +14,9 @@ import pages.RegistrationPage;
 public class RegistrationTest extends TestBase{
 
 	RegistrationPage rp ;
-	String firstname = "Tom";
-	String lastname = "Swear";
-	String email = "test.myppaz998435@gmail.com";
+	String firstname = "MICHEL";
+	String lastname = "ZOUL";
+	String email = "test.myppBaz998467@gmail.com";
 	String pwd = "123456Ab.";
 	String newpwd = "123456aB.";
 

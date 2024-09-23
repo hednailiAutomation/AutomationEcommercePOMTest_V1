@@ -3,11 +3,20 @@
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="testng(failed)">
     <classes>
+      <class name="tests.ProductOrderTest">
+        <methods>
+          <include name="EditShipping"/>
+          <include name="FinishShipping"/>
+          <include name="tearDown"/>
+          <include name="Login"/>
+          <include name="StartDriver"/>
+        </methods>
+      </class> <!-- tests.ProductOrderTest -->
       <class name="tests.ProductSearchTest">
         <methods>
           <include name="ChooseProduct"/>
-          <include name="tearDown"/>
           <include name="SearchProduct"/>
+          <include name="tearDown"/>
           <include name="SortProduct"/>
           <include name="StartDriver"/>
         </methods>
@@ -19,34 +28,6 @@
           <include name="StartDriver"/>
         </methods>
       </class> <!-- tests.AddProductToCartTest -->
-      <class name="tests.ProductOrderTest">
-        <methods>
-          <include name="EditShipping"/>
-          <include name="FinishShipping"/>
-          <include name="tearDown"/>
-          <include name="Login"/>
-          <include name="StartDriver"/>
-        </methods>
-      </class> <!-- tests.ProductOrderTest -->
-      <class name="tests.RegistrationTest">
-        <methods>
-          <include name="tearDown"/>
-          <include name="ChangePassword"/>
-          <include name="StartDriver"/>
-          <include name="Registration"/>
-        </methods>
-      </class> <!-- tests.RegistrationTest -->
-      <class name="tests.LoginTest">
-        <methods>
-          <include name="SignOut"/>
-          <include name="ValidCredentialsLogin"/>
-          <include name="EmptyCredentialsLogin"/>
-          <include name="InvalidEmailLogin"/>
-          <include name="InvalidPasswordLogin"/>
-          <include name="tearDown"/>
-          <include name="StartDriver"/>
-        </methods>
-      </class> <!-- tests.LoginTest -->
     </classes>
   </test> <!-- testng(failed) -->
 </suite> <!-- Failed suite [Suite] -->
