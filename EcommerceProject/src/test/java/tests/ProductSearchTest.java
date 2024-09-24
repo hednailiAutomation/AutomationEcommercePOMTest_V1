@@ -3,6 +3,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.testng.annotations.Test;
 
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
 import junit.framework.Assert;
 import pages.LoginPage;
 import pages.ProductSearchPage;
@@ -13,7 +15,7 @@ public class ProductSearchTest extends TestBase {
 	LoginPage lp;
 	String productName = "Jacket";
 	String nbr= "2";
-	String email = "test.myppBaz998667@gmail.com";
+	String email = "test.myppBaz998777@gmail.com";
 	String newpwd = "123456aB.";
 	String qty = "2";
 
@@ -21,6 +23,7 @@ public class ProductSearchTest extends TestBase {
 
 
 	@Test(priority=1)
+	@Severity(SeverityLevel.MINOR)
 	void SearchProduct()
 	{
 		ps = new ProductSearchPage(driver);

@@ -8,13 +8,15 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
 import io.qameta.allure.Description;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
 import junit.framework.Assert;
 import pages.LoginPage;
 
 public class LoginTest extends TestBase{
 
 	LoginPage lp ;
-	String email = "test.myppBaz998667@gmail.com";
+	String email = "test.myppBaz998777@gmail.com";
 	String validpwd = "123456Ab.";
 	String invalidEmail1 = "123abc@";
 	String invalidEmail2 = "123abc.com";
@@ -27,6 +29,7 @@ public class LoginTest extends TestBase{
 
 	@Test(priority=1)
 	@Description("Verify login fonctionality with invalid email / valid password")
+	@Severity(SeverityLevel.CRITICAL)
 	void  InvalidEmailLogin() throws InterruptedException
 	{
 		lp=new LoginPage(driver);
@@ -36,11 +39,11 @@ public class LoginTest extends TestBase{
 		Assert.assertTrue(driver.findElement(By.id("email-error")).isDisplayed());
 		lp.login(invalidEmail2,validpwd);
 		WebDriverWait wait2 = new WebDriverWait(driver, Duration.ofSeconds(2));
-		wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("send2")));
+		wait2.until(ExpectedConditions.visibilityOfElementLocated(By.id("send2")));
 		Assert.assertTrue(driver.findElement(By.id("email-error")).isDisplayed());
 		lp.login(invalidEmail3,validpwd);
 		WebDriverWait wait3 = new WebDriverWait(driver, Duration.ofSeconds(2));
-		wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("send2")));
+		wait3.until(ExpectedConditions.visibilityOfElementLocated(By.id("send2")));
 		Assert.assertTrue(driver.findElement(By.id("email-error")).isDisplayed());
 		
 	}

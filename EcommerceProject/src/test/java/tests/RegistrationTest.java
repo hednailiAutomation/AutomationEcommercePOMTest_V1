@@ -9,6 +9,9 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.AssertJUnit;
 import org.testng.annotations.Test;
 
+import io.qameta.allure.Description;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
 import pages.RegistrationPage;
 
 public class RegistrationTest extends TestBase{
@@ -16,13 +19,15 @@ public class RegistrationTest extends TestBase{
 	RegistrationPage rp ;
 	String firstname = "MICHEL";
 	String lastname = "ZOUL";
-	String email = "test.myppBaz998667@gmail.com";
+	String email = "test.myppBaz998777@gmail.com";
 	String pwd = "123456Ab.";
 	String newpwd = "123456aB.";
 
 
 
 	@Test(priority=1)
+	@Description("Verify user can register")
+	
 	void Registration() throws InterruptedException
 	{
 		rp = new RegistrationPage(driver);
@@ -31,6 +36,7 @@ public class RegistrationTest extends TestBase{
 	}
 
 	@Test(priority=2)
+	
 	void ChangePassword () 
 	{
 		rp = new RegistrationPage(driver);
