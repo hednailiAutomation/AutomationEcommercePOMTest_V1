@@ -3,27 +3,10 @@
 <suite name="Failed suite [EcommercePomTestSuite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="testng(failed)">
     <classes>
-      <class name="tests.RegistrationTest">
-        <methods>
-          <include name="tearDown"/>
-          <include name="ChangePassword"/>
-          <include name="StartDriver"/>
-        </methods>
-      </class> <!-- tests.RegistrationTest -->
-      <class name="tests.LoginTest">
-        <methods>
-          <include name="EmptyCredentialsLogin"/>
-          <include name="ValidCredentialsLogin"/>
-          <include name="InvalidEmailLogin"/>
-          <include name="InvalidPasswordLogin"/>
-          <include name="tearDown"/>
-          <include name="StartDriver"/>
-        </methods>
-      </class> <!-- tests.LoginTest -->
       <class name="tests.ProductOrderTest">
         <methods>
-          <include name="EditShipping"/>
           <include name="FinishShipping"/>
+          <include name="EditShipping"/>
           <include name="tearDown"/>
           <include name="Login"/>
           <include name="StartDriver"/>

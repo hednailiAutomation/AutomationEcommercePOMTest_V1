@@ -4,6 +4,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
 import junit.framework.Assert;
 import pages.ProductOrderPage;
 
@@ -13,6 +15,7 @@ public class ProductOrderTest extends TestBase{
 
 
 	@Test(priority=1)
+	@Severity(SeverityLevel.BLOCKER)
 	public void Login() throws InterruptedException
 	{
 		po= new  ProductOrderPage(driver);

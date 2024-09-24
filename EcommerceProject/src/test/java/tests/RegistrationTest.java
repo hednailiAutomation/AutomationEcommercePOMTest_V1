@@ -19,7 +19,7 @@ public class RegistrationTest extends TestBase{
 	RegistrationPage rp ;
 	String firstname = "MICHEL";
 	String lastname = "ZOUL";
-	String email = "test.myppBaz998777@gmail.com";
+	String email = "test.myppBaz999@gmail.com";
 	String pwd = "123456Ab.";
 	String newpwd = "123456aB.";
 
@@ -27,6 +27,7 @@ public class RegistrationTest extends TestBase{
 
 	@Test(priority=1)
 	@Description("Verify user can register")
+	@Severity(SeverityLevel.BLOCKER)
 	
 	void Registration() throws InterruptedException
 	{

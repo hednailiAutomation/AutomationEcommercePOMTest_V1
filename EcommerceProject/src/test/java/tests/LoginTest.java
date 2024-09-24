@@ -16,7 +16,7 @@ import pages.LoginPage;
 public class LoginTest extends TestBase{
 
 	LoginPage lp ;
-	String email = "test.myppBaz998777@gmail.com";
+	String email = "test.myppBaz999@gmail.com";
 	String validpwd = "123456Ab.";
 	String invalidEmail1 = "123abc@";
 	String invalidEmail2 = "123abc.com";
@@ -45,7 +45,7 @@ public class LoginTest extends TestBase{
 		WebDriverWait wait3 = new WebDriverWait(driver, Duration.ofSeconds(2));
 		wait3.until(ExpectedConditions.visibilityOfElementLocated(By.id("send2")));
 		Assert.assertTrue(driver.findElement(By.id("email-error")).isDisplayed());
-		
+
 	}
 
 	@Test(priority=2)
@@ -75,6 +75,7 @@ public class LoginTest extends TestBase{
 
 	@Test(priority=4)
 	@Description("Verify login fonctionality with valid email / valid password")
+	@Severity(SeverityLevel.BLOCKER)
 	void ValidCredentialsLogin() throws InterruptedException
 	{
 		lp = new LoginPage(driver);
@@ -82,14 +83,14 @@ public class LoginTest extends TestBase{
 		Thread.sleep(3000);
 		Assert.assertTrue(driver.findElement(By.className("logged-in")).isDisplayed());
 	}
-	
+
 	@Test(priority=5)
 	void SignOut() throws InterruptedException 
 	{
 		lp = new LoginPage(driver);
-		Thread.sleep(2000);
+		Thread.sleep(1000);
 		lp.Signout();
 	}
-	
+
 }
 

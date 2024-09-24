@@ -15,7 +15,7 @@ public class ProductSearchTest extends TestBase {
 	LoginPage lp;
 	String productName = "Jacket";
 	String nbr= "2";
-	String email = "test.myppBaz998777@gmail.com";
+	String email = "test.myppBaz999@gmail.com";
 	String newpwd = "123456aB.";
 	String qty = "2";
 
@@ -31,6 +31,7 @@ public class ProductSearchTest extends TestBase {
 	}
 
 	@Test(priority=2)
+	@Severity(SeverityLevel.MINOR)
 	void SortProduct()
 	{
 		ps=new ProductSearchPage(driver);
@@ -38,11 +39,12 @@ public class ProductSearchTest extends TestBase {
 	}
 
 	@Test(priority=3)
+	@Severity(SeverityLevel.MINOR)
 	void ChooseProduct()
 	{
 		ps =new ProductSearchPage(driver);
 		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("window.scrollBy(0, 1000)");
+		js.executeScript("window.scrollBy(0, 1100)");
 		ps.ChooseProduct(qty);
 		Assert.assertTrue(driver.findElement(By.className("swatch-attribute-selected-option")).isDisplayed());
 	}
