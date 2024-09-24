@@ -13,10 +13,14 @@ import pages.LoginPage;
 public class LoginTest extends TestBase{
 
 	LoginPage lp ;
-	String invalidEmail = "123@";
-	String invalidPwd = "1234";
-	String email = "test.myppBaz998467@gmail.com";
-	String pwd = "123456Ab.";
+	String email = "test.myppBaz998567@gmail.com";
+	String validpwd = "123456Ab.";
+	String invalidEmail = "123abc@";
+	String invalidEmai2 = "123abc.com";
+	String invalidEmai3 = "123abc";
+	String invalidPwd1 = "abcdefgh";
+	String invalidPwd2 = "123456789";
+	String invalidPwd3 = "123Ab.";
 	String newpwd  ="123456aB.";
 
 
@@ -24,7 +28,7 @@ public class LoginTest extends TestBase{
 	void  InvalidEmailLogin() throws InterruptedException
 	{
 		lp=new LoginPage(driver);
-		lp.login(invalidEmail,pwd);
+		lp.login(invalidEmail,validpwd);
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(2));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("send2")));
 		Assert.assertTrue(driver.findElement(By.id("email-error")).isDisplayed());
@@ -34,7 +38,7 @@ public class LoginTest extends TestBase{
 	void  InvalidPasswordLogin() throws InterruptedException
 	{
 		lp=new LoginPage(driver);
-		lp.login(email,invalidPwd);
+		lp.login(email,invalidPwd1);
 		Thread.sleep(3000);
 		Assert.assertTrue(driver.findElement(By.xpath("//*[@id=\"maincontent\"]/div[2]/div[2]/div/div")).isDisplayed());
 	}

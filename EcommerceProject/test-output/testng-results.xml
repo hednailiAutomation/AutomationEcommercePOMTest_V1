@@ -1,53 +1,206 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="7" passed="7" failed="0" skipped="0">
+<testng-results ignored="0" total="14" passed="12" failed="2" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-09-23T21:14:38 GMT+01:00" name="Suite" finished-at="2024-09-23T21:15:40 GMT+01:00" duration-ms="61746">
+  <suite started-at="2024-09-24T21:18:09 GMT+01:00" name="Suite" finished-at="2024-09-24T21:19:22 GMT+01:00" duration-ms="72696">
     <groups>
     </groups>
-    <test started-at="2024-09-23T21:14:38 GMT+01:00" name="testng" finished-at="2024-09-23T21:15:40 GMT+01:00" duration-ms="61746">
+    <test started-at="2024-09-24T21:18:09 GMT+01:00" name="testng" finished-at="2024-09-24T21:19:22 GMT+01:00" duration-ms="72696">
+      <class name="tests.LoginTest">
+        <test-method signature="InvalidEmailLogin()[pri:1, instance:tests.LoginTest@2b76ff4e]" started-at="2024-09-24T21:18:22 GMT+01:00" name="InvalidEmailLogin" finished-at="2024-09-24T21:18:23 GMT+01:00" duration-ms="1597" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- InvalidEmailLogin -->
+        <test-method signature="InvalidPasswordLogin()[pri:2, instance:tests.LoginTest@2b76ff4e]" started-at="2024-09-24T21:18:23 GMT+01:00" name="InvalidPasswordLogin" finished-at="2024-09-24T21:18:29 GMT+01:00" duration-ms="5856" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- InvalidPasswordLogin -->
+        <test-method signature="EmptyCredentialsLogin()[pri:3, instance:tests.LoginTest@2b76ff4e]" started-at="2024-09-24T21:18:29 GMT+01:00" name="EmptyCredentialsLogin" finished-at="2024-09-24T21:18:30 GMT+01:00" duration-ms="1360" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- EmptyCredentialsLogin -->
+        <test-method signature="ValidCredentialsLogin()[pri:4, instance:tests.LoginTest@2b76ff4e]" started-at="2024-09-24T21:18:31 GMT+01:00" name="ValidCredentialsLogin" finished-at="2024-09-24T21:18:37 GMT+01:00" duration-ms="6641" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ValidCredentialsLogin -->
+        <test-method signature="SignOut()[pri:5, instance:tests.LoginTest@2b76ff4e]" started-at="2024-09-24T21:18:37 GMT+01:00" name="SignOut" finished-at="2024-09-24T21:18:41 GMT+01:00" duration-ms="3970" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SignOut -->
+      </class> <!-- tests.LoginTest -->
       <class name="tests.ProductOrderTest">
-        <test-method signature="Login()[pri:1, instance:tests.ProductOrderTest@5b218417]" started-at="2024-09-23T21:14:49 GMT+01:00" name="Login" finished-at="2024-09-23T21:15:10 GMT+01:00" duration-ms="21395" status="PASS">
+        <test-method signature="Login()[pri:1, instance:tests.ProductOrderTest@24ba9639]" started-at="2024-09-24T21:19:00 GMT+01:00" name="Login" finished-at="2024-09-24T21:19:10 GMT+01:00" duration-ms="10110" status="FAIL">
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for visibility of element located by By.xpath: //form[@class='form form-login']/descendant::input[1] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.15.0', revision: '1d14b5521b'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.24'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 129.0.6668.59, chrome: {chromedriverVersion: 129.0.6668.70 (df87d5cf12b1..., userDataDir: C:\Users\hedi\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53337}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53337/devtoo..., se:cdpVersion: 129.0.6668.59, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 8c22484774856b21c86a39e78250fd5f]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //form[@class='form form-login']/descendant::input[1] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.15.0', revision: '1d14b5521b'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.24'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 129.0.6668.59, chrome: {chromedriverVersion: 129.0.6668.70 (df87d5cf12b1..., userDataDir: C:\Users\hedi\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53337}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53337/devtoo..., se:cdpVersion: 129.0.6668.59, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 8c22484774856b21c86a39e78250fd5f
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:229)
+at pages.ProductOrderPage.Login(ProductOrderPage.java:50)
+at tests.ProductOrderTest.Login(ProductOrderTest.java:19)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+at org.testng.TestRunner.privateRun(TestRunner.java:848)
+at org.testng.TestRunner.run(TestRunner.java:621)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+at org.testng.TestNG.runSuites(TestNG.java:1114)
+at org.testng.TestNG.run(TestNG.java:1082)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Login -->
-        <test-method signature="EditShipping()[pri:2, instance:tests.ProductOrderTest@5b218417]" started-at="2024-09-23T21:15:10 GMT+01:00" name="EditShipping" finished-at="2024-09-23T21:15:28 GMT+01:00" duration-ms="17538" status="PASS">
+        <test-method signature="EditShipping()[pri:2, instance:tests.ProductOrderTest@24ba9639]" started-at="2024-09-24T21:19:10 GMT+01:00" name="EditShipping" finished-at="2024-09-24T21:19:14 GMT+01:00" duration-ms="4111" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- EditShipping -->
-        <test-method signature="FinishShipping()[pri:3, instance:tests.ProductOrderTest@5b218417]" started-at="2024-09-23T21:15:28 GMT+01:00" name="FinishShipping" finished-at="2024-09-23T21:15:40 GMT+01:00" duration-ms="11814" status="PASS">
+        <test-method signature="FinishShipping()[pri:3, instance:tests.ProductOrderTest@24ba9639]" started-at="2024-09-24T21:19:14 GMT+01:00" name="FinishShipping" finished-at="2024-09-24T21:19:22 GMT+01:00" duration-ms="8131" status="FAIL">
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//form[@id='co-payment-form']/descendant::button[@title='Place Order']"}
+  (Session info: chrome=129.0.6668.59)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.15.0', revision: '1d14b5521b'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.24'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [8c22484774856b21c86a39e78250fd5f, findElement {using=xpath, value=//form[@id='co-payment-form']/descendant::button[@title='Place Order']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 129.0.6668.59, chrome: {chromedriverVersion: 129.0.6668.70 (df87d5cf12b1..., userDataDir: C:\Users\hedi\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53337}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53337/devtoo..., se:cdpVersion: 129.0.6668.59, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 8c22484774856b21c86a39e78250fd5f]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//form[@id='co-payment-form']/descendant::button[@title='Place Order']"}
+  (Session info: chrome=129.0.6668.59)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.15.0', revision: '1d14b5521b'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.24'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [8c22484774856b21c86a39e78250fd5f, findElement {using=xpath, value=//form[@id='co-payment-form']/descendant::button[@title='Place Order']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 129.0.6668.59, chrome: {chromedriverVersion: 129.0.6668.70 (df87d5cf12b1..., userDataDir: C:\Users\hedi\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53337}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53337/devtoo..., se:cdpVersion: 129.0.6668.59, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 8c22484774856b21c86a39e78250fd5f
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:607)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:364)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:358)
+at pages.ProductOrderPage.placeOlderShipping(ProductOrderPage.java:109)
+at tests.ProductOrderTest.FinishShipping(ProductOrderTest.java:56)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+at org.testng.TestRunner.privateRun(TestRunner.java:848)
+at org.testng.TestRunner.run(TestRunner.java:621)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+at org.testng.TestNG.runSuites(TestNG.java:1114)
+at org.testng.TestNG.run(TestNG.java:1082)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- FinishShipping -->
       </class> <!-- tests.ProductOrderTest -->
       <class name="tests.AddProductToCartTest">
-        <test-method signature="AddToCartProduct()[pri:1, instance:tests.AddProductToCartTest@cc43f62]" started-at="2024-09-23T21:14:45 GMT+01:00" name="AddToCartProduct" finished-at="2024-09-23T21:14:49 GMT+01:00" duration-ms="3826" status="PASS">
+        <test-method signature="AddToCartProduct()[pri:1, instance:tests.AddProductToCartTest@2f62ea70]" started-at="2024-09-24T21:18:55 GMT+01:00" name="AddToCartProduct" finished-at="2024-09-24T21:19:00 GMT+01:00" duration-ms="4352" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AddToCartProduct -->
       </class> <!-- tests.AddProductToCartTest -->
       <class name="tests.ProductSearchTest">
-        <test-method is-config="true" signature="StartDriver()[pri:0, instance:tests.ProductSearchTest@909217e]" started-at="2024-09-23T21:14:28 GMT+01:00" name="StartDriver" finished-at="2024-09-23T21:14:38 GMT+01:00" duration-ms="9536" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- StartDriver -->
-        <test-method signature="SearchProduct()[pri:1, instance:tests.ProductSearchTest@909217e]" started-at="2024-09-23T21:14:38 GMT+01:00" name="SearchProduct" finished-at="2024-09-23T21:14:41 GMT+01:00" duration-ms="2612" status="PASS">
+        <test-method signature="SearchProduct()[pri:1, instance:tests.ProductSearchTest@7a1234bf]" started-at="2024-09-24T21:18:41 GMT+01:00" name="SearchProduct" finished-at="2024-09-24T21:18:47 GMT+01:00" duration-ms="5841" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- SearchProduct -->
-        <test-method signature="SortProduct()[pri:2, instance:tests.ProductSearchTest@909217e]" started-at="2024-09-23T21:14:41 GMT+01:00" name="SortProduct" finished-at="2024-09-23T21:14:43 GMT+01:00" duration-ms="1907" status="PASS">
+        <test-method signature="SortProduct()[pri:2, instance:tests.ProductSearchTest@7a1234bf]" started-at="2024-09-24T21:18:47 GMT+01:00" name="SortProduct" finished-at="2024-09-24T21:18:50 GMT+01:00" duration-ms="2764" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- SortProduct -->
-        <test-method signature="ChooseProduct()[pri:3, instance:tests.ProductSearchTest@909217e]" started-at="2024-09-23T21:14:43 GMT+01:00" name="ChooseProduct" finished-at="2024-09-23T21:14:45 GMT+01:00" duration-ms="2495" status="PASS">
+        <test-method signature="ChooseProduct()[pri:3, instance:tests.ProductSearchTest@7a1234bf]" started-at="2024-09-24T21:18:50 GMT+01:00" name="ChooseProduct" finished-at="2024-09-24T21:18:55 GMT+01:00" duration-ms="5561" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ChooseProduct -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.ProductSearchTest@909217e]" started-at="2024-09-23T21:15:40 GMT+01:00" name="tearDown" finished-at="2024-09-23T21:15:40 GMT+01:00" duration-ms="0" status="PASS">
+      </class> <!-- tests.ProductSearchTest -->
+      <class name="tests.RegistrationTest">
+        <test-method is-config="true" signature="StartDriver()[pri:0, instance:tests.RegistrationTest@42b02722]" started-at="2024-09-24T21:17:22 GMT+01:00" name="StartDriver" finished-at="2024-09-24T21:18:09 GMT+01:00" duration-ms="47760" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- StartDriver -->
+        <test-method signature="Registration()[pri:1, instance:tests.RegistrationTest@42b02722]" started-at="2024-09-24T21:18:10 GMT+01:00" name="Registration" finished-at="2024-09-24T21:18:16 GMT+01:00" duration-ms="6930" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Registration -->
+        <test-method signature="ChangePassword()[pri:2, instance:tests.RegistrationTest@42b02722]" started-at="2024-09-24T21:18:17 GMT+01:00" name="ChangePassword" finished-at="2024-09-24T21:18:22 GMT+01:00" duration-ms="4779" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ChangePassword -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.RegistrationTest@42b02722]" started-at="2024-09-24T21:19:22 GMT+01:00" name="tearDown" finished-at="2024-09-24T21:19:22 GMT+01:00" duration-ms="2" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- tests.ProductSearchTest -->
+      </class> <!-- tests.RegistrationTest -->
     </test> <!-- testng -->
   </suite> <!-- Suite -->
 </testng-results>
