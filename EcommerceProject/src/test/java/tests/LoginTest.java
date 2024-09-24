@@ -7,17 +7,18 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
+import io.qameta.allure.Description;
 import junit.framework.Assert;
 import pages.LoginPage;
 
 public class LoginTest extends TestBase{
 
 	LoginPage lp ;
-	String email = "test.myppBaz998567@gmail.com";
+	String email = "test.myppBaz998667@gmail.com";
 	String validpwd = "123456Ab.";
-	String invalidEmail = "123abc@";
-	String invalidEmai2 = "123abc.com";
-	String invalidEmai3 = "123abc";
+	String invalidEmail1 = "123abc@";
+	String invalidEmail2 = "123abc.com";
+	String invalidEmail3 = "123abc";
 	String invalidPwd1 = "abcdefgh";
 	String invalidPwd2 = "123456789";
 	String invalidPwd3 = "123Ab.";
@@ -25,25 +26,43 @@ public class LoginTest extends TestBase{
 
 
 	@Test(priority=1)
+	@Description("Verify login fonctionality with invalid email / valid password")
 	void  InvalidEmailLogin() throws InterruptedException
 	{
 		lp=new LoginPage(driver);
-		lp.login(invalidEmail,validpwd);
+		lp.login(invalidEmail1,validpwd);
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(2));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("send2")));
 		Assert.assertTrue(driver.findElement(By.id("email-error")).isDisplayed());
+		lp.login(invalidEmail2,validpwd);
+		WebDriverWait wait2 = new WebDriverWait(driver, Duration.ofSeconds(2));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("send2")));
+		Assert.assertTrue(driver.findElement(By.id("email-error")).isDisplayed());
+		lp.login(invalidEmail3,validpwd);
+		WebDriverWait wait3 = new WebDriverWait(driver, Duration.ofSeconds(2));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("send2")));
+		Assert.assertTrue(driver.findElement(By.id("email-error")).isDisplayed());
+		
 	}
 
 	@Test(priority=2)
+	@Description("Verify login fonctionality with valid email / invalid password")
 	void  InvalidPasswordLogin() throws InterruptedException
 	{
 		lp=new LoginPage(driver);
 		lp.login(email,invalidPwd1);
 		Thread.sleep(3000);
 		Assert.assertTrue(driver.findElement(By.xpath("//*[@id=\"maincontent\"]/div[2]/div[2]/div/div")).isDisplayed());
+		lp.login(email,invalidPwd2);
+		Thread.sleep(3000);
+		Assert.assertTrue(driver.findElement(By.xpath("//*[@id=\"maincontent\"]/div[2]/div[2]/div/div")).isDisplayed());
+		lp.login(email,invalidPwd3);
+		Thread.sleep(3000);
+		Assert.assertTrue(driver.findElement(By.xpath("//*[@id=\"maincontent\"]/div[2]/div[2]/div/div")).isDisplayed());
 	}
 
 	@Test(priority=3)
+	@Description("Verify login fontionnality with empty input credentials")
 	void EmptyCredentialsLogin()
 	{
 		lp= new LoginPage(driver);
@@ -52,6 +71,7 @@ public class LoginTest extends TestBase{
 	}
 
 	@Test(priority=4)
+	@Description("Verify login fonctionality with valid email / valid password")
 	void ValidCredentialsLogin() throws InterruptedException
 	{
 		lp = new LoginPage(driver);
