@@ -1,3 +1,3 @@
-Ecommerce_POM_Project_Using_Cucumber
-* Integrate behavior driven devolpement in a Page Object Model e-commerce testing project 
-* You have to modify user e-mail to succeed the test suit
+Ecommerce_POM_Project with Allure reports
+-Allure-reports integrated with this POM Project
+-You have to modify 'user e-mail' in *RegistrationTest *LoginTest and *ProductSearchTest to success all Suite tests!
