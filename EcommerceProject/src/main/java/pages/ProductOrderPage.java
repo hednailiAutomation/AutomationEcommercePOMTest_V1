@@ -54,13 +54,13 @@ public class ProductOrderPage {
 		driver.findElement(login_btn).click();
 
 	}
-	
+
 	public void newAdress() 
 	{
 		driver.findElement(newAdress_link).click();
-		
+
 	}
-	
+
 	public void CheckCart(String company ,String street,String street2,String street3 ,String city, String province) throws InterruptedException
 	{
 		driver.findElement(company_txt).sendKeys(company);
@@ -93,7 +93,7 @@ public class ProductOrderPage {
 		//driver.findElement(shipMethod_btn).click();
 		driver.findElement(next_btn).click();
 	}
-	
+
 	public void shiphere(String phone) throws InterruptedException 
 	{
 		driver.findElement(phone_txt).sendKeys(phone);
@@ -109,5 +109,5 @@ public class ProductOrderPage {
 		driver.findElement(placeolder_btn).click();
 	}
 
-	
+
 }
