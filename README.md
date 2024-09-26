@@ -1,5 +1,5 @@
-Ecommerce_POM _Project with Allure reports
+Ecommerce_POM_Project with Cucumber 
 =======
-Allure-reports integrated with this POM Project
+Behavior-driven developement integrated with this page object model e-commerce Project
 You have to modify 'user e-mail' in *RegistrationTest *LoginTest and *ProductSearchTest to success all Suite tests!
 
