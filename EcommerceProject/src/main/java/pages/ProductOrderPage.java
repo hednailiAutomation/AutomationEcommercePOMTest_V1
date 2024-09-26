@@ -109,19 +109,5 @@ public class ProductOrderPage {
 		driver.findElement(placeolder_btn).click();
 	}
 
-	public void showReceipt() throws InterruptedException
-	{
-		Thread.sleep(5000);
-		driver.findElement(receiptprint_link).click();
-	}
-
-	public void printReceipt() throws InterruptedException
-	{
-		Thread.sleep(5000);
-		Select select3 = new Select(driver.findElement(pdf_select));
-		select3.selectByValue("\r\n"
-				+ "        Enregistrer au format PDF\r\n"
-				+ "      ");
-		driver.findElement(print_btn).click();
-	}
+	
 }
