@@ -9,6 +9,12 @@
     <artifactId>cucumber-java</artifactId>
     <version>7.19.0</version>
 </dependency>
+<dependency>
+    <groupId>io.github.bonigarcia</groupId>
+    <artifactId>webdrivermanager</artifactId>
+    <version>5.9.2</version>
+    <scope>test</scope>
+</dependency>
 <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-junit -->
 <dependency>
     <groupId>io.cucumber</groupId>
