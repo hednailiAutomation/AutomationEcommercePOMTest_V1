@@ -28,12 +28,14 @@ public class LoginPage {
 	public void enterUsername(String username ) 
 	{
 
+		driver.findElement(txt_email).clear();
 		driver.findElement(txt_email).sendKeys(username);
 
 	}
 
 	public void enterPassword(String password)
 	{
+		driver.findElement(txt_password).clear();
 		driver.findElement(txt_password).sendKeys(password);
 
 	}
@@ -43,9 +45,23 @@ public class LoginPage {
 		driver.findElement(btn_signin).click();
 	}
 
+	public void submitEmptyUsername(String username) 
+	{
+		driver.findElement(txt_email).clear();
+		driver.findElement(txt_email).sendKeys(username);
+	}
+
+	public void submitEmptyPassword(String password)
+	{
+		driver.findElement(txt_password).clear();
+		driver.findElement(txt_password).sendKeys(password);
+	}
+
+
 	public void Signout() 
 	{
 		driver.findElement(btn_myAccount).click();
 		driver.findElement(btn_signout).click();
 	}
+
 }
