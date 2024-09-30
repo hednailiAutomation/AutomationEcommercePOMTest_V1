@@ -37,7 +37,7 @@ Feature: login functionality
       | username                   | password  |
       | test.myppBaz9995@gmail.com | abcdefgh  |
       | test.myppBaz9995@gmail.com | 123456789 |
-      | test.myppBaz9995@gmail.com | 123Ab.    |
+      | test.myppBaz9995@gmail.com | 1234Ab.    |
     And hits on login button
     Then a password error message should be displayed
 
