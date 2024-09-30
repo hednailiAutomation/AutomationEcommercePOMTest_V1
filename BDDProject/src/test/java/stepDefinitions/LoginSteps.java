@@ -20,8 +20,8 @@ public class LoginSteps extends BasePage {
 
 	
 	WebDriver driver = Hooks.driver;
-	
 	LoginPage lp = new LoginPage(driver);
+	
 	@Given("user is on login page")
 	public void user_login() {
 		LoginPage lp = new LoginPage(driver);
@@ -52,10 +52,6 @@ public class LoginSteps extends BasePage {
 		Thread.sleep(4000);
 	}
 
-	@And("hits on login button")
-	public void clickLogin() {
-
-	}
 
 	@Then("user is navigated to home page")
 	public void succesLogin() throws InterruptedException {
