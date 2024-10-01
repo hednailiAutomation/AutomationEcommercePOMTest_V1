@@ -1,11 +1,15 @@
 package stepDefinitions;
 
+import java.util.List;
+import java.util.Map;
+
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 import commun.BasePage;
 import commun.Hooks;
+import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -31,15 +35,13 @@ public class ChangePasswordSteps extends BasePage {
 	}
 
 	@And("select my account")
-	public void select_my_account() throws InterruptedException 
-	{
+	public void select_my_account() throws InterruptedException {
 		Thread.sleep(3000);
 		pwdchange.myAccountSelect();
 	}
 
 	@And("clicks on change password link")
-	public void clicks_on_change_password_link()
-	{
+	public void clicks_on_change_password_link() {
 		pwdchange.changePasswordLink();
 	}
 
@@ -61,6 +63,7 @@ public class ChangePasswordSteps extends BasePage {
 		pwdchange.confirmNewPassword(newpassword);
 	}
 
+
 	@And("clicks on save button")
 	public void clicks_on_save_button() throws InterruptedException {
 		pwdchange.saveNewPassword();
@@ -73,10 +76,10 @@ public class ChangePasswordSteps extends BasePage {
 				"//div[@class='message-success success message']/descendant::div[@data-bind='html: $parent.prepareMessageForHtml(message.text)']"))
 				.getText().contains("You saved the account information"));
 	}
-	
+
 	@Then("an error message is displayed")
-	public void an_error_message_is_displayed() 
-	{
-		Assert.assertTrue(driver.findElement(By.xpath("//div[@id='password-confirmation-error']")).getText().contains("Please enter the same value again"));
+	public void an_error_message_is_displayed() {
+		Assert.assertTrue(driver.findElement(By.xpath("//div[@id='password-confirmation-error']")).getText()
+				.contains("Please enter the same value again"));
 	}
 }

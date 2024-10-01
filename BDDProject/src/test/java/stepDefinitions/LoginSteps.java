@@ -10,7 +10,6 @@ import org.openqa.selenium.WebDriver;
 import commun.BasePage;
 import commun.Hooks;
 import io.cucumber.datatable.DataTable;
-import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
