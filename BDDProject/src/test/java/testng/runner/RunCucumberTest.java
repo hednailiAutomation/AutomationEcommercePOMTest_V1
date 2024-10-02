@@ -9,7 +9,7 @@ import io.cucumber.junit.CucumberOptions;
 @CucumberOptions(features = "src//test//resources//Features", glue = { "commun", "pages", "stepDefinitions",
 		"testng.runner" }, plugin = { "pretty", "html:target/HtmlReports/index.html",
 				"json:target/JsonReports/report.json",
-				"junit:target/JUnitReports/report.xml" }, monochrome = true, tags = "@ChangePassword or @OldPasswordCheck or @DifferentPasswordConfirm")
+				"junit:target/JUnitReports/report.xml" }, monochrome = true, tags = "@AutoSuggestSearch or @ManualSearch")
 
 public class RunCucumberTest {
 
