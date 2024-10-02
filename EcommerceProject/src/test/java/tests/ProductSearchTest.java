@@ -1,6 +1,6 @@
 package tests;
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.Test;
 
 import io.qameta.allure.Severity;
@@ -15,8 +15,8 @@ public class ProductSearchTest extends TestBase {
 	LoginPage lp;
 	String productName = "Jacket";
 	String nbr= "2";
-	String email = "test.myppBaz9991@gmail.com";
-	String newpwd = "123456aB.";
+	String email = "test.myppBalk16@gmail.com";
+	String newpwd = "123456aB-";
 	String qty = "2";
 
 
@@ -38,13 +38,13 @@ public class ProductSearchTest extends TestBase {
 		ps.SortProduct();
 	}
 
-	@Test(priority=3)
+	@Test(priority = 3)
 	@Severity(SeverityLevel.MINOR)
-	void ChooseProduct()
-	{
-		ps =new ProductSearchPage(driver);
-		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("window.scrollBy(0, 1100)");
+	void ChooseProduct() {
+		ps = new ProductSearchPage(driver);
+		Actions action = new Actions(driver);
+		action.scrollToElement(driver.findElement(
+				By.xpath("//*[@id=\"maincontent\"]/div[3]/div[1]/div[2]/div[2]/ol/li[1]/div/div/strong/a"))).perform();
 		ps.ChooseProduct(qty);
 		Assert.assertTrue(driver.findElement(By.className("swatch-attribute-selected-option")).isDisplayed());
 	}

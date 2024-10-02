@@ -19,9 +19,9 @@ public class RegistrationTest extends TestBase{
 	RegistrationPage rp ;
 	String firstname = "MICHEL";
 	String lastname = "ZOUL";
-	String email = "test.myppBaz9994@gmail.com";
-	String pwd = "123456Ab.";
-	String newpwd = "123456aB.";
+	String email = "test.myppBalk15@gmail.com";
+	String pwd = "123456zE-";
+	String newpwd = "123456aB-";
 
 
 
@@ -37,7 +37,8 @@ public class RegistrationTest extends TestBase{
 	}
 
 	@Test(priority=2)
-
+	@Description("ChangePassword")
+	@Severity(SeverityLevel.CRITICAL)
 	void ChangePassword () 
 	{
 		rp = new RegistrationPage(driver);

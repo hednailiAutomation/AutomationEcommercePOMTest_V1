@@ -16,15 +16,15 @@ import pages.LoginPage;
 public class LoginTest extends TestBase{
 
 	LoginPage lp ;
-	String email = "test.myppBaz9994@gmail.com";
-	String validpwd = "123456Ab.";
+	String email = "test.myppBalk15@gmail.com";
+	String validpwd = "123456aB-";
 	String invalidEmail1 = "123abc@";
 	String invalidEmail2 = "123abc.com";
 	String invalidEmail3 = "123abc";
 	String invalidPwd1 = "abcdefgh";
 	String invalidPwd2 = "123456789";
 	String invalidPwd3 = "123Ab.";
-	String newpwd  ="123456aB.";
+
 
 
 	@Test(priority=1)
@@ -79,7 +79,7 @@ public class LoginTest extends TestBase{
 	void ValidCredentialsLogin() throws InterruptedException
 	{
 		lp = new LoginPage(driver);
-		lp.login(email,newpwd);
+		lp.login(email,validpwd);
 		Thread.sleep(3000);
 		Assert.assertTrue(driver.findElement(By.className("logged-in")).isDisplayed());
 	}
