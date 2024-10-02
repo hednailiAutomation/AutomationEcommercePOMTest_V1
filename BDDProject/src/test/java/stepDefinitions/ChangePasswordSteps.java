@@ -53,8 +53,8 @@ public class ChangePasswordSteps extends BasePage {
 		pwdchange.enterNewPassword(newpassword);
 	}
 
-	@And("enters confirm password {string}")
-	public void enters_confirm_password(String newpassword) 
+	@And("enters new confirm password {string}")
+	public void enters_new_confirm_password(String newpassword) 
 	{
 		pwdchange.confirmNewPassword(newpassword);
 	}

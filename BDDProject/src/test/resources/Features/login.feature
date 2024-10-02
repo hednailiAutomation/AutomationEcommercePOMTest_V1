@@ -1,8 +1,10 @@
 Feature: login functionality
 
+  Background: 
+    Given user is on login page
+
   @ValidCredentials
   Scenario Outline: Check login with valid credentials
-    Given user is on login page
     When user enters username and password
       | username                   | password  |
       | test.myppBaz9995@gmail.com | 123456aB- |
@@ -11,7 +13,6 @@ Feature: login functionality
 
   @InvalidCredentials1
   Scenario Outline: Check login with invalid e-mail and invalid password
-    Given user is on login page
     When user enters username and password
       | username | password  |
       | @.com    | 123456789 |
@@ -20,7 +21,6 @@ Feature: login functionality
 
   @InvalidCredentials2
   Scenario Outline: Check login with invalid e-mail and valid password
-    Given user is on login page
     When user enters username and password
       | username   | password  |
       | 123abc@    | 123456aB- |
@@ -32,7 +32,6 @@ Feature: login functionality
 
   @InvalidCredentials3
   Scenario Outline: Check login with valid e-mail and invalid password
-    Given user is on login page
     When user enters username and password
       | username                   | password  |
       | test.myppBaz9995@gmail.com | abcdefgh  |
@@ -43,7 +42,6 @@ Feature: login functionality
 
   @InvalidCredentials4
   Scenario: Check login with empty credentials
-    Given user is on login page
     When user enters "" and "" for credentials
     And hits on login button
     Then required fields error message should be displayed

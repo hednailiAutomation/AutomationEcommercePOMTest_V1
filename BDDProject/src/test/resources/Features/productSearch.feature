@@ -1,8 +1,10 @@
 Feature: Search For Product
 
+  Background: 
+    Given user is on home page
+
   @AutoSuggestSearch
   Scenario: Search Product with Auto-Suggestion
-    Given user is on home page
     When user enters a part of productname "jacke" in the search box
     And choose the second suggested option
     And clicks on sort product by price
@@ -13,7 +15,6 @@ Feature: Search For Product
 
   @ManualSearch
   Scenario: Search Product manualy
-    Given user is on home page
     When user enters "jacket for men" in the search box
     And hits keybord Enter key
     And clicks on sort product by product name
