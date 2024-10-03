@@ -19,7 +19,7 @@ public class AutoSuggestProductSearchPage {
 	By txt_searchbox = By.xpath("//form[@id='search_mini_form']/descendant::input[@class='input-text']");
 	By option_select = By.id("qs-option-3");
 	By select_product = By.id("sorter");
-	By btn_product = By.xpath("//*[@id=\"maincontent\"]/div[3]/div[1]/div[2]/div[2]/ol/li[1]/div/div/strong/a");
+	By btn_product = By.xpath("//*[@id='maincontent']/descendant::img[@alt='Lando Gym Jacket']");
 	By btn_size  = By.id("option-label-size-143-item-169");
 	By btn_color = By.id("option-label-color-93-item-50");
 	By txt_quantity = By.xpath("//*[@id=\"qty\"]");

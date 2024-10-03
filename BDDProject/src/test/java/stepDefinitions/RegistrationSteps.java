@@ -22,7 +22,7 @@ public class RegistrationSteps extends BasePage {
 		rp.createAccount();
 	}
 
-	@When("enters firstname {string}")
+	@When("user enters firstname {string}")
 	public void enters_firstname(String firstname) {
 		rp.enterFirstname(firstname);
 	}
@@ -60,5 +60,18 @@ public class RegistrationSteps extends BasePage {
 						By.xpath("//main[@id='maincontent']/descendant::div[@class='message-success success message']"))
 				.isDisplayed());
 	}
+	
+	@Then("required field error message is displayed")
+	public void required_field_error_message_is_displayed() 
+	{
+		Assert.assertTrue(driver.findElement(By.xpath("//form[@class='form create account form-create-account']/descendant::div[@id='firstname-error']")).isDisplayed());
+	}
+	
+	@Then("existing email error message is displayed")
+	public void existing_email_error_message_is_displayed()
+	{
+		Assert.assertTrue(driver.findElement(By.xpath("//main[@id='maincontent']/descendant::div[@class='message-error error message']")).isDisplayed());
+	}
+	
 
 }

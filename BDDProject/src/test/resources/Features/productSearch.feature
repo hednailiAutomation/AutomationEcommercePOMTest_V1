@@ -24,3 +24,14 @@ Feature: Search For Product
     And choose the size the color and the desired quantity "2"
     And clicks add to cart button
     Then the product is added to cart
+
+  @HoverSearch
+  Scenario: Search Product With Hover on Main store
+    When user hovers on Men in store menu
+    And navigates to Tops sub menu
+    And navigates to Jackets sub menu and clicks on it
+    And clicks on sort product by product name
+    And scrolls page to Lando Gym Jacket product
+    And choose the size the color and the desired quantity "2"
+    And clicks add to cart button
+    Then the product is added to cart

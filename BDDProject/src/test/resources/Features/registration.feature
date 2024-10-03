@@ -4,11 +4,31 @@ Feature: Registration Fonctionality
     Given user is on register page
 
   @Register
-  Scenario: Check user can register
-    When enters firstname "Moez"
+  Scenario: Check registration with all required fields
+    When user enters firstname "Moez"
     And enters lastname "Chkir"
-    And enters email "Moez5.chkir@test.fr"
+    And enters email "Moez9.chkir@test.fr"
     And enters password "123456aB."
     And enters a confirm password "123456aB."
     And hits create account
     Then registration confirm message is displayed
+
+  @Register
+  Scenario: Check registration when skip a required field
+    When user enters firstname ""
+    And enters lastname ""
+    And enters email "Moez9.chkir@test.fr"
+    And enters password "123456aB."
+    And enters a confirm password "123456aB."
+    And hits create account
+    Then required field error message is displayed
+
+  @Register
+  Scenario: Check Registration with existing user e-mail
+    When user enters firstname "Moez"
+    And enters lastname "Chkir"
+    And enters email "Moez6.chkir@test.fr"
+    And enters password "123456aB."
+    And enters a confirm password "123456aB."
+    And hits create account
+    Then existing email error message is displayed
