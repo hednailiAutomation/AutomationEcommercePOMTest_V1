@@ -11,14 +11,15 @@ import pages.ProductOrderPage;
 
 public class ProductOrderTest extends TestBase{
 
-	ProductOrderPage po ;
+	
+	ProductOrderPage po= new  ProductOrderPage(driver);
 
 
 	@Test(priority=1)
 	@Severity(SeverityLevel.BLOCKER)
 	public void Login() throws InterruptedException
 	{
-		po= new  ProductOrderPage(driver);
+		
 		po.Login("test.myppBaz9994@gmail.com", "123456aB.");
 		Thread.sleep(10000);
 	}
@@ -27,7 +28,7 @@ public class ProductOrderTest extends TestBase{
 	@Test(priority=2)
 	public void EditShipping() throws InterruptedException
 	{
-		po = new ProductOrderPage(driver);
+
 		Thread.sleep(3000);
 		try {
 			WebElement element =driver.findElement(By.xpath("//div[@class='page-wrapper']/descendant::button[@class='action action-show-popup']"));
@@ -55,7 +56,6 @@ public class ProductOrderTest extends TestBase{
 	@Test(priority=3)
 	public void FinishShipping() throws InterruptedException
 	{
-		po= new ProductOrderPage(driver);
 		po.placeOlderShipping();
 		Thread.sleep(4000);
 		Assert.assertEquals(driver.findElement(By.xpath("//span[@class='base']")).getText(), "Thank you for your purchase!");
