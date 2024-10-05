@@ -6,11 +6,11 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 
-public class ProductsearchPage {
+public class ProductSearchAndAddToCartPage {
 	
 	WebDriver driver ;
 	
-	public ProductsearchPage(WebDriver driver)
+	public ProductSearchAndAddToCartPage(WebDriver driver)
 	{
 		this.driver = driver;
 	}

@@ -10,12 +10,12 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import pages.AutoSuggestProductSearchPage;
+import pages.AutoSuggestSearchAndAddToCartPage;
 
-public class AutoSuggestProductSearchStep extends BasePage {
+public class AutoSuggestSearcAndAddToCartStep extends BasePage {
 
 	WebDriver driver = Hooks.driver;
-	AutoSuggestProductSearchPage ps = new AutoSuggestProductSearchPage(driver);
+	AutoSuggestSearchAndAddToCartPage ps = new AutoSuggestSearchAndAddToCartPage(driver);
 
 
 	@Given("user is on home page")

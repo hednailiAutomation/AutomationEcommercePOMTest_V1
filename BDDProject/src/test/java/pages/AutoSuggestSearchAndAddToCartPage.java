@@ -1,16 +1,15 @@
 package pages;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 
-public class AutoSuggestProductSearchPage {
+public class AutoSuggestSearchAndAddToCartPage {
 
 	WebDriver driver ;
 
-	public AutoSuggestProductSearchPage(WebDriver driver)
+	public AutoSuggestSearchAndAddToCartPage(WebDriver driver)
 	{
 		this.driver =driver ;
 	}

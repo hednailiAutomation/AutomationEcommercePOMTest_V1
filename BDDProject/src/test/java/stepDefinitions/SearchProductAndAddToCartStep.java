@@ -6,12 +6,12 @@ import commun.BasePage;
 import commun.Hooks;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.When;
-import pages.ProductsearchPage;
+import pages.ProductSearchAndAddToCartPage;
 
-public class ProductSearchStep extends BasePage{
+public class SearchProductAndAddToCartStep extends BasePage{
 	
 	WebDriver driver = Hooks.driver ;
-	ProductsearchPage prodsearch = new ProductsearchPage(driver);
+	ProductSearchAndAddToCartPage prodsearch = new ProductSearchAndAddToCartPage(driver);
 	
 	
 	@When("user enters {string} in the search box")

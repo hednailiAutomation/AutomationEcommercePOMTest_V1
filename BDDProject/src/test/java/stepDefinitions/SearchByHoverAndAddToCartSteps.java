@@ -6,12 +6,12 @@ import commun.BasePage;
 import commun.Hooks;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.When;
-import pages.SearchWithHoverActionsPage;
+import pages.SearchByHoverAndAddToCartPage;
 
-public class SearchWithHoverActionsSteps extends BasePage {
+public class SearchByHoverAndAddToCartSteps extends BasePage {
 	
 	WebDriver driver = Hooks.driver;
-	SearchWithHoverActionsPage searchhov = new SearchWithHoverActionsPage(driver);
+	SearchByHoverAndAddToCartPage searchhov = new SearchByHoverAndAddToCartPage(driver);
 	
 	
 	@When("user hovers on Men in store menu")

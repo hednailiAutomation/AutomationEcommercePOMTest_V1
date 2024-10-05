@@ -10,7 +10,7 @@ import io.cucumber.junit.CucumberOptions;
 		"testng.runner"}, plugin = {"pretty","html:target/HtmlReports/index.html",
 				"json:target/JsonReports/report.json",
 				"junit:target/JUnitReports/report.xml"}, monochrome = true,
-				tags ="@HoverSearch")
+				tags ="@ProductOrder")
 
 public class RunCucumberTest {
 

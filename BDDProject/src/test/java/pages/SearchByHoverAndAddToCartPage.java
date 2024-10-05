@@ -5,12 +5,12 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 
-public class SearchWithHoverActionsPage {
+public class SearchByHoverAndAddToCartPage {
 
 	
 	WebDriver driver ;
 	
-	public SearchWithHoverActionsPage(WebDriver driver)
+	public SearchByHoverAndAddToCartPage(WebDriver driver)
 	{
 		this.driver=driver ;	}
 	
