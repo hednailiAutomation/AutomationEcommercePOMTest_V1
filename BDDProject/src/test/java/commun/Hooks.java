@@ -8,7 +8,6 @@ import org.openqa.selenium.chrome.ChromeOptions;
 
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
-import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class Hooks extends BasePage{
 
@@ -17,7 +16,6 @@ public class Hooks extends BasePage{
 	{
 		ChromeOptions options = new ChromeOptions();
 		options.addArguments("--disable-search-engine-choice-screen");
-		WebDriverManager.chromedriver().setup();
 		driver= new ChromeDriver(options);
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
 		driver.get("https://magento.softwaretestingboard.com/");

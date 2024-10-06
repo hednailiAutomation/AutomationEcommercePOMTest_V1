@@ -41,17 +41,17 @@ public class ProductorderPage {
 	By placeolder_btn = By.xpath("//form[@id='co-payment-form']/descendant::button[@class='action primary checkout']");
 	By checkbox_billing = By.xpath("//div[@class='payment-method-content']/descendant::input[@id='billing-address-same-as-shipping-checkmo']");
 	
-	public void addToCart ()
+	public void addProductToCart ()
 	{
 		driver.findElement(cart_link).click();
 	}
 	
-	public void checkout () 
+	public void checkoutBtn () 
 	{
 		driver.findElement(checkout_btn).click();
 	}
 
-	public void signin()
+	public void userSignin()
 	{
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"checkout\"]/div[1]/button")));
@@ -74,12 +74,12 @@ public class ProductorderPage {
 		driver.findElement(signin_btn).click();
 	}
 
-	public void company(String company)
+	public void enterCompany(String company)
 	{
 		driver.findElement(company_txt).sendKeys(company);
 	}
 
-	public void street(String street)
+	public void enterStreet(String street)
 	{
 		driver.findElement(street_txt).sendKeys(street);
 
@@ -92,14 +92,14 @@ public class ProductorderPage {
 		driver.findElement(city_txt).sendKeys(city);
 	}
 
-	public void province()
+	public void enterProvince()
 	{
 		Select select = new Select(driver.findElement(province_select));
 		select.selectByIndex(2);
 	}
 
 
-	public void zipCode(String zip) 
+	public void enterZipCode(String zip) 
 	{
 		driver.findElement(zip_txt).sendKeys(zip);
 
@@ -112,7 +112,7 @@ public class ProductorderPage {
 		Thread.sleep(3000);
 	}
 
-	public void phone (String phone ) throws InterruptedException
+	public void enterPhone (String phone ) throws InterruptedException
 	{
 		driver.findElement(phone_txt).sendKeys(phone);
 		Thread.sleep(3000);
@@ -124,12 +124,12 @@ public class ProductorderPage {
 		driver.findElement(shipMethod_btn).click();
 	}
 
-	public void next() 
+	public void nextBtn() 
 	{
 		driver.findElement(btn_next).click();
 	}
 
-	public void placeholder() throws InterruptedException 
+	public void placeholderBtn() throws InterruptedException 
 	{
 		Thread.sleep(4000);
 		driver.findElement(placeolder_btn).click();

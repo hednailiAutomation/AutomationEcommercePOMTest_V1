@@ -42,14 +42,6 @@
     <artifactId>cucumber-java</artifactId>
     <version>7.19.0</version>
 </dependency>
-<dependency>
-    <groupId>io.github.bonigarcia</groupId>
-    <artifactId>webdrivermanager</artifactId>
-    <version>5.9.2</version>
-</dependency>
-<!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-testng -->
-
-<!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-surefire-plugin -->
   </dependencies>
   <build>
     <pluginManagement>

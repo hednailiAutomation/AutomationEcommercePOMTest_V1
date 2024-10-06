@@ -49,13 +49,13 @@ public class ProductOrderStep extends BasePage {
 	@And("enters company {string}")
 	public void enterCompany(String company) throws InterruptedException  {
 		Thread.sleep(10000);
-		addtocart.company(company);
+		addtocart.enterCompany(company);
 	}
 	
 	@And("enters street {string}")
 	public void enters_street(String street ) 
 	{
-		addtocart.street(street);
+		addtocart.enterStreet(street);
 	}
 	
 	@And("enters city {string}")
@@ -67,13 +67,13 @@ public class ProductOrderStep extends BasePage {
 	@And("selects state province")
 	public void selects_state_province() 
 	{
-		addtocart.province();
+		addtocart.enterProvince();
 	}
 	
 	@And("enters zip code {string}")
 	public void zip(String zip)
 	{
-		addtocart.zipCode(zip);
+		addtocart.enterZipCode(zip);
 	}
 	
 	@And("selects country")
@@ -85,7 +85,7 @@ public class ProductOrderStep extends BasePage {
 	@And("add enters phone {string}")
 	public void add_phone(String phone) throws InterruptedException 
 	{
-		addtocart.phone(phone);
+		addtocart.enterPhone(phone);
 	}
 	
 	@And("choose shipping method")
@@ -98,13 +98,13 @@ public class ProductOrderStep extends BasePage {
 	@And("hits next button")
 	public void hits_next_button() 
 	{
-		addtocart.next();
+		addtocart.nextBtn();
 	}
 	
 	@And("hits the placeholder button")
 	public void hits_the_placeholder_button() throws InterruptedException 
 	{
-		addtocart.placeholder();
+		addtocart.placeholderBtn();
 	}
 
 	@Then("purshase validation message is displayed")
