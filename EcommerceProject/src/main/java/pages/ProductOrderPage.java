@@ -1,12 +1,8 @@
 package pages;
 
-import java.time.Duration;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class ProductOrderPage {
 
@@ -18,9 +14,10 @@ public class ProductOrderPage {
 	}
 
 
-	By email_txt = By.xpath("//form[@class='form form-login']/descendant::input[1]");
-	By password_txt = By.xpath("//form[@class='form form-login']/descendant::input[2]");
-	By login_btn = By.xpath("//*[@id=\"customer-email-fieldset\"]/fieldset/div[2]/div[1]/button");
+	By signin_Btn = By.xpath("//div[@class='authentication-wrapper']/descendant::button[@data-trigger='authentication']");
+	By email_Txt = By.xpath("//form[@data-role='login']/descendant::input[@id='login-email']");
+	By password_Txt = By.xpath("//form[@data-role='login']/descendant::input[@id='login-password']");
+	By signin_btn = By.xpath("//form[@data-role='login']/descendant::button[@type='submit']");
 	By item_link =  By.cssSelector("span[role='tab']");
 	By firstname_txt= By.xpath("//form[@id='co-shipping-form']/descendant::input[1]");
 	By lastname_txt= By.xpath("//form[@id='co-shipping-form']/descendant::input[2]");
@@ -37,21 +34,20 @@ public class ProductOrderPage {
 	By next_btn = By.xpath("//form[@id='co-shipping-method-form']/descendant::button[@class='button action continue primary']");
 	By btn_shiphere = By.xpath("//footer[@class='modal-footer']/descendant::button[@class='action primary action-save-address']");
 	By btn_next = By.xpath("//div[@id='shipping-method-buttons-container']/descendant::button[@class='button action continue primary']");
-	By placeolder_btn = By.xpath("//form[@id='co-payment-form']/descendant::button[@title='Place Order']");
+	By placeorder_btn = By.xpath("//form[@id='co-payment-form']/descendant::button[@class='action primary checkout']");
 	By receiptprint_link = By.xpath("//a[@class='action print']");
 	By newAdress_link = By.xpath("//div[@class='page-wrapper']/descendant::button[@class='action action-show-popup']");
 	By print_btn  = By.className("action-button");
 	By pdf_select = By.xpath("//*[@id=\"destinationSelect\"]//print-preview-settings-section/div/select");
 
 
-	public void Login (String email , String newpwd)
+	public void signin (String email , String newpwd) throws InterruptedException
 	{
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//form[@class='form form-login']/descendant::input[1]")));
-		driver.findElement(email_txt).sendKeys(email);
-		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//form[@class='form form-login']/descendant::input[2]")));
-		driver.findElement(password_txt).sendKeys(newpwd);
-		driver.findElement(login_btn).click();
+		Thread.sleep(10000);
+		driver.findElement(signin_Btn).click();
+		driver.findElement(email_Txt).sendKeys(email);
+		driver.findElement(password_Txt).sendKeys(newpwd);
+		driver.findElement(signin_btn).click();
 
 	}
 
@@ -93,7 +89,7 @@ public class ProductOrderPage {
 		driver.findElement(next_btn).click();
 	}
 
-	public void shiphere(String phone) throws InterruptedException 
+	public void shipHere(String phone) throws InterruptedException 
 	{
 		driver.findElement(phone_txt).sendKeys(phone);
 		Thread.sleep(3000);
@@ -102,10 +98,10 @@ public class ProductOrderPage {
 		driver.findElement(btn_next).click();
 	}
 
-	public void placeOlderShipping () throws InterruptedException
+	public void placeorderShipping () throws InterruptedException
 	{
 		Thread.sleep(7000);
-		driver.findElement(placeolder_btn).click();
+		driver.findElement(placeorder_btn).click();
 	}
 
 

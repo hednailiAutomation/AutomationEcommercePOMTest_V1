@@ -6,17 +6,13 @@ import org.testng.annotations.Test;
 import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
 import junit.framework.Assert;
-import pages.LoginPage;
 import pages.ProductSearchPage;
 
 public class ProductSearchTest extends TestBase {
 
 	ProductSearchPage ps = new  ProductSearchPage(driver);
-	LoginPage lp = new LoginPage(driver);
 	String productName = "Jack";
 	String nbr= "2";
-	String email = "test.myppBalk16@gmail.com";
-	String newpwd = "123456aB-";
 	String qty = "2";
 
 
@@ -24,8 +20,10 @@ public class ProductSearchTest extends TestBase {
 
 	@Test(priority=1)
 	@Severity(SeverityLevel.MINOR)
-	void SearchProduct()
+	void SearchProduct() throws InterruptedException
 	{
+		ProductSearchPage ps = new  ProductSearchPage(driver);
+		Thread.sleep(3000);
 		ps.SearchForProduct(productName);
 	}
 
@@ -33,12 +31,14 @@ public class ProductSearchTest extends TestBase {
 	@Severity(SeverityLevel.MINOR)
 	void SortProduct()
 	{
+		ProductSearchPage ps = new  ProductSearchPage(driver);
 		ps.SortProduct();
 	}
 
 	@Test(priority = 3)
 	@Severity(SeverityLevel.MINOR)
 	void ChooseProduct() {
+		ProductSearchPage ps = new  ProductSearchPage(driver);
 		Actions action = new Actions(driver);
 		action.scrollToElement(driver.findElement(
 				By.xpath("//main[@id='maincontent']/descendant::img[@alt='Lando Gym Jacket']"))).perform();

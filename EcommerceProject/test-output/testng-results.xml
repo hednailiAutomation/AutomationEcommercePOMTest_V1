@@ -1,33 +1,85 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+<testng-results ignored="0" total="14" passed="14" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-10-02T13:10:43 GMT+01:00" name="Default suite" finished-at="2024-10-02T13:10:58 GMT+01:00" duration-ms="14422">
+  <suite started-at="2024-10-06T22:20:08 GMT+01:00" name="e-commercePomProject" finished-at="2024-10-06T22:23:41 GMT+01:00" duration-ms="212826">
     <groups>
     </groups>
-    <test started-at="2024-10-02T13:10:43 GMT+01:00" name="Default test" finished-at="2024-10-02T13:10:58 GMT+01:00" duration-ms="14422">
-      <class name="tests.ProductSearchTest">
-        <test-method is-config="true" signature="StartDriver()[pri:0, instance:tests.ProductSearchTest@3f9342d4]" started-at="2024-10-02T13:10:32 GMT+01:00" name="StartDriver" finished-at="2024-10-02T13:10:43 GMT+01:00" duration-ms="10842" status="PASS">
+    <test started-at="2024-10-06T22:20:08 GMT+01:00" name="Regression-test" finished-at="2024-10-06T22:23:41 GMT+01:00" duration-ms="212826">
+      <class name="tests.LoginTest">
+        <test-method signature="InvalidEmailLogin()[pri:1, instance:tests.LoginTest@6b88ca8c]" started-at="2024-10-06T22:20:29 GMT+01:00" name="InvalidEmailLogin" finished-at="2024-10-06T22:20:49 GMT+01:00" duration-ms="20799" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- StartDriver -->
-        <test-method signature="SearchProduct()[pri:1, instance:tests.ProductSearchTest@3f9342d4]" started-at="2024-10-02T13:10:43 GMT+01:00" name="SearchProduct" finished-at="2024-10-02T13:10:46 GMT+01:00" duration-ms="3006" status="PASS">
+        </test-method> <!-- InvalidEmailLogin -->
+        <test-method signature="InvalidPasswordLogin()[pri:2, instance:tests.LoginTest@6b88ca8c]" started-at="2024-10-06T22:20:49 GMT+01:00" name="InvalidPasswordLogin" finished-at="2024-10-06T22:21:33 GMT+01:00" duration-ms="43612" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- InvalidPasswordLogin -->
+        <test-method signature="EmptyCredentialsLogin()[pri:3, instance:tests.LoginTest@6b88ca8c]" started-at="2024-10-06T22:21:33 GMT+01:00" name="EmptyCredentialsLogin" finished-at="2024-10-06T22:21:36 GMT+01:00" duration-ms="2846" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- EmptyCredentialsLogin -->
+        <test-method signature="ValidCredentialsLogin()[pri:4, instance:tests.LoginTest@6b88ca8c]" started-at="2024-10-06T22:21:36 GMT+01:00" name="ValidCredentialsLogin" finished-at="2024-10-06T22:22:29 GMT+01:00" duration-ms="52556" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ValidCredentialsLogin -->
+        <test-method signature="SignOut()[pri:5, instance:tests.LoginTest@6b88ca8c]" started-at="2024-10-06T22:22:29 GMT+01:00" name="SignOut" finished-at="2024-10-06T22:22:32 GMT+01:00" duration-ms="3193" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SignOut -->
+      </class> <!-- tests.LoginTest -->
+      <class name="tests.ProductOrderTest">
+        <test-method signature="Login()[pri:1, instance:tests.ProductOrderTest@19e4fcac]" started-at="2024-10-06T22:22:49 GMT+01:00" name="Login" finished-at="2024-10-06T22:23:10 GMT+01:00" duration-ms="20965" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Login -->
+        <test-method signature="EditShipping()[pri:2, instance:tests.ProductOrderTest@19e4fcac]" started-at="2024-10-06T22:23:10 GMT+01:00" name="EditShipping" finished-at="2024-10-06T22:23:37 GMT+01:00" duration-ms="26717" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- EditShipping -->
+        <test-method signature="FinishShipping()[pri:3, instance:tests.ProductOrderTest@19e4fcac]" started-at="2024-10-06T22:23:37 GMT+01:00" name="FinishShipping" finished-at="2024-10-06T22:23:41 GMT+01:00" duration-ms="4315" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- FinishShipping -->
+      </class> <!-- tests.ProductOrderTest -->
+      <class name="tests.AddProductToCartTest">
+        <test-method signature="AddToCartProduct()[pri:0, instance:tests.AddProductToCartTest@34158c08]" started-at="2024-10-06T22:22:45 GMT+01:00" name="AddToCartProduct" finished-at="2024-10-06T22:22:49 GMT+01:00" duration-ms="3873" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AddToCartProduct -->
+      </class> <!-- tests.AddProductToCartTest -->
+      <class name="tests.ProductSearchTest">
+        <test-method signature="SearchProduct()[pri:1, instance:tests.ProductSearchTest@2f16c6b3]" started-at="2024-10-06T22:22:32 GMT+01:00" name="SearchProduct" finished-at="2024-10-06T22:22:38 GMT+01:00" duration-ms="5762" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- SearchProduct -->
-        <test-method signature="SortProduct()[pri:2, instance:tests.ProductSearchTest@3f9342d4]" started-at="2024-10-02T13:10:46 GMT+01:00" name="SortProduct" finished-at="2024-10-02T13:10:50 GMT+01:00" duration-ms="3587" status="PASS">
+        <test-method signature="SortProduct()[pri:2, instance:tests.ProductSearchTest@2f16c6b3]" started-at="2024-10-06T22:22:38 GMT+01:00" name="SortProduct" finished-at="2024-10-06T22:22:41 GMT+01:00" duration-ms="3137" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- SortProduct -->
-        <test-method signature="ChooseProduct()[pri:3, instance:tests.ProductSearchTest@3f9342d4]" started-at="2024-10-02T13:10:50 GMT+01:00" name="ChooseProduct" finished-at="2024-10-02T13:10:58 GMT+01:00" duration-ms="7570" status="PASS">
+        <test-method signature="ChooseProduct()[pri:3, instance:tests.ProductSearchTest@2f16c6b3]" started-at="2024-10-06T22:22:41 GMT+01:00" name="ChooseProduct" finished-at="2024-10-06T22:22:45 GMT+01:00" duration-ms="4590" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ChooseProduct -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.ProductSearchTest@3f9342d4]" started-at="2024-10-02T13:10:58 GMT+01:00" name="tearDown" finished-at="2024-10-02T13:10:58 GMT+01:00" duration-ms="326" status="PASS">
+      </class> <!-- tests.ProductSearchTest -->
+      <class name="tests.RegistrationTest">
+        <test-method is-config="true" signature="StartDriver()[pri:0, instance:tests.RegistrationTest@554e218]" started-at="2024-10-06T22:19:56 GMT+01:00" name="StartDriver" finished-at="2024-10-06T22:20:08 GMT+01:00" duration-ms="12506" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- StartDriver -->
+        <test-method signature="Registration()[pri:1, instance:tests.RegistrationTest@554e218]" started-at="2024-10-06T22:20:09 GMT+01:00" name="Registration" finished-at="2024-10-06T22:20:21 GMT+01:00" duration-ms="11997" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Registration -->
+        <test-method signature="ChangePassword()[pri:2, instance:tests.RegistrationTest@554e218]" started-at="2024-10-06T22:20:21 GMT+01:00" name="ChangePassword" finished-at="2024-10-06T22:20:29 GMT+01:00" duration-ms="7861" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ChangePassword -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.RegistrationTest@554e218]" started-at="2024-10-06T22:23:42 GMT+01:00" name="tearDown" finished-at="2024-10-06T22:23:42 GMT+01:00" duration-ms="687" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- tests.ProductSearchTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      </class> <!-- tests.RegistrationTest -->
+    </test> <!-- Regression-test -->
+  </suite> <!-- e-commercePomProject -->
 </testng-results>

@@ -19,7 +19,7 @@ public class RegistrationTest extends TestBase{
 	RegistrationPage rp = new RegistrationPage(driver);
 	String firstname = "MICHEL";
 	String lastname = "ZOUL";
-	String email = "test.myppBalk16@gmail.com";
+	String email = "test.myppBalk179@gmail.com";
 	String pwd = "123456zE-";
 	String newpwd = "123456aB-";
 
@@ -31,6 +31,7 @@ public class RegistrationTest extends TestBase{
 
 	void Registration() throws InterruptedException
 	{
+		RegistrationPage rp = new RegistrationPage(driver);
 		rp.createAccount(firstname,lastname,email,pwd);
 		AssertJUnit.assertEquals("My Account", driver.findElement(By.className("base")).getText());
 	}
@@ -40,6 +41,7 @@ public class RegistrationTest extends TestBase{
 	@Severity(SeverityLevel.CRITICAL)
 	void ChangePassword () 
 	{
+		RegistrationPage rp = new RegistrationPage(driver);
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[@class='customer-name']/descendant::button[@class='action switch']")));
 		rp.changePassword(pwd,newpwd);

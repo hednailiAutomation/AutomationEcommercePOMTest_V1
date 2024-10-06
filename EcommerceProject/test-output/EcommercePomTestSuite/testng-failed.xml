@@ -7,24 +7,25 @@
         <methods>
           <include name="ChooseProduct"/>
           <include name="tearDown"/>
+          <include name="SearchProduct"/>
+          <include name="SortProduct"/>
           <include name="StartDriver"/>
         </methods>
       </class> <!-- tests.ProductSearchTest -->
-      <class name="tests.AddProductToCartTest">
-        <methods>
-          <include name="AddToCartProduct"/>
-          <include name="tearDown"/>
-          <include name="StartDriver"/>
-        </methods>
-      </class> <!-- tests.AddProductToCartTest -->
       <class name="tests.ProductOrderTest">
         <methods>
-          <include name="FinishShipping"/>
           <include name="tearDown"/>
           <include name="Login"/>
           <include name="StartDriver"/>
         </methods>
       </class> <!-- tests.ProductOrderTest -->
+      <class name="tests.AddProductToCartTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="AddToCartProduct"/>
+          <include name="StartDriver"/>
+        </methods>
+      </class> <!-- tests.AddProductToCartTest -->
     </classes>
   </test> <!-- testng(failed) -->
 </suite> <!-- Failed suite [EcommercePomTestSuite] -->
