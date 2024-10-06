@@ -7,7 +7,7 @@ Feature: login functionality
   Scenario Outline: Check login with valid credentials
     When user enters username and password
       | username                   | password  |
-      | test.myppBaz9995@gmail.com | 123456aB- |
+      | Moez9991.chkir@test.fr | 123456aB- |
     And hits on login button
     Then user is navigated to home page
 
@@ -34,9 +34,9 @@ Feature: login functionality
   Scenario Outline: Check login with valid e-mail and invalid password
     When user enters username and password
       | username                   | password  |
-      | test.myppBaz9995@gmail.com | abcdefgh  |
-      | test.myppBaz9995@gmail.com | 123456789 |
-      | test.myppBaz9995@gmail.com | 1234Ab.   |
+      | Moez9991.chkir@test.fr | abcdefgh  |
+      | Moez9991.chkir@test.fr | 123456789 |
+      | Moez9991.chkir@test.fr | 1234Ab.   |
     And hits on login button
     Then a password error message should be displayed
 

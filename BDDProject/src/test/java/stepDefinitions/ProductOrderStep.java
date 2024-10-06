@@ -23,58 +23,93 @@ public class ProductOrderStep extends BasePage {
 	public void hits_the_checkout_button() {
 		addtocart.checkout();
 	}
-
+	
+	@And("hits the sign in button")
+	public void hits_the_signin_button() 
+	{
+		addtocart.signin();
+	}
+	
 	@And("enters the email {string}")
-	public void enters_email(String email) {
-		addtocart.enterEmail(email);
+	public void enters_email(String useremail) {
+		addtocart.enterEmail(useremail);
 	}
 
 	@And("enters the password {string}")
-	public void enters_password(String password) {
-		addtocart.enterPassword(password);
+	public void enters_password(String userpassword) {
+		addtocart.enterPassword(userpassword);
 	}
 
 	@And("hits the login button")
 	public void hits_the_login_button() {
-		addtocart.submit();
+		addtocart.submitLogin();
 	}
 	
 
-	@And("enters company {string} street {string} and city {string}")
-	public void addShippingAdress(String company,String street,String city) throws InterruptedException {
-		addtocart.shippingAdress(company,street,city);
-	}
-
-
-	@And("selects country")
-	public void selects_country() throws InterruptedException {
-		addtocart.selectCountry();
+	@And("enters company {string}")
+	public void enterCompany(String company) throws InterruptedException  {
+		Thread.sleep(10000);
+		addtocart.company(company);
 	}
 	
-	@And("enters zip {string}")
-	public void zip(String zip) {
+	@And("enters street {string}")
+	public void enters_street(String street ) 
+	{
+		addtocart.street(street);
+	}
+	
+	@And("enters city {string}")
+	public void enters_city(String city) throws InterruptedException 
+	{
+		addtocart.enterCity(city);
+	}
+	
+	@And("selects state province")
+	public void selects_state_province() 
+	{
+		addtocart.province();
+	}
+	
+	@And("enters zip code {string}")
+	public void zip(String zip)
+	{
 		addtocart.zipCode(zip);
 	}
+	
+	@And("selects country")
+	public void selects_country() throws InterruptedException
+	{
+		addtocart.selectCountry();
+	}
 
-	@And("add phone {string}")
-	public void add_phone(String phone) throws InterruptedException {
-		addtocart.ContinueShipping(phone);
+	@And("add enters phone {string}")
+	public void add_phone(String phone) throws InterruptedException 
+	{
+		addtocart.phone(phone);
 	}
 	
-	@And("check the checkbox billing adress")
-	public void check_the_checkbox_billing_adress() 
+	@And("choose shipping method")
+	public void choose_shipping_method() throws InterruptedException 
 	{
-		addtocart.checkboxBilling();
+		Thread.sleep(5000);
+		addtocart.shipingMethod();
+	}
+	
+	@And("hits next button")
+	public void hits_next_button() 
+	{
+		addtocart.next();
 	}
 	
 	@And("hits the placeholder button")
-	public void hits_the_placeholder_button() 
+	public void hits_the_placeholder_button() throws InterruptedException 
 	{
 		addtocart.placeholder();
 	}
 
 	@Then("purshase validation message is displayed")
-	public void purshase_validation_message() throws InterruptedException {
+	public void purshase_validation_message() throws InterruptedException 
+	{
 
 		addtocart.purchaseValidation();
 	}

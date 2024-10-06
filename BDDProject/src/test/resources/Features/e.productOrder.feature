@@ -14,13 +14,17 @@ Feature: Product Order Fonctionalty
   Scenario: Check User Can Order Product
     When user hits on cart link
     And hits the checkout button
-    And enters the email "aaabbb@test.com"
-    And enters the password "123456aB."
+    And hits the sign in button
+    And enters the email "Moez9991.chkir@test.fr"
+    And enters the password "123456Ab-"
     And hits the login button
-    And enters company "coding" street "Republic" and city "Texas"
-    And selects country
-    And enters zip "43567"
-    And add phone "12345678"
-    And check the checkbox billing adress
+    And enters company "coding"
+    And enters street "Republic"
+    And enters city "paris"
+    And selects state province
+    And enters zip code "12345"
+    And add enters phone "12345678"
+    And choose shipping method
+    And hits next button
     And hits the placeholder button
     Then purshase validation message is displayed

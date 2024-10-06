@@ -9,118 +9,132 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class ProductorderPage {
-	
+
 	WebDriver driver ;
 	public ProductorderPage(WebDriver driver)
 	{
 		this.driver = driver ;
 	}
-	
-	By btn_product = By.xpath("//main[@id='maincontent']/descendant::img[@alt='Lando Gym Jacket']");
-	By btn_size  = By.id("option-label-size-143-item-169");
-	By btn_color = By.id("option-label-color-93-item-50");
-	By txt_quantity = By.xpath("//*[@id=\"qty\"]");
-	By btn_addtocart = By.xpath("//div[@class='product-info-main']/descendant::button[@id='product-addtocart-button']");
-	By hover_main =  By.xpath("//div[@id='store.menu']/descendant::a[@id='ui-id-5']");
-	By hover_sub_tops = By.id("ui-id-17");
-	By hover_sub_jackets = By.id("ui-id-19");
+
 	By cart_link = By.xpath("/html/body/div[2]/header/div[2]/div[1]/a");
 	By checkout_btn = By.id("top-cart-btn-checkout");
+	By signin_Btn = By.xpath("//*[@id=\"checkout\"]/div[1]/button");
+	By email_Txt = By.xpath("//form[@data-role='login']/descendant::input[@id='login-email']");
+	By password_Txt = By.xpath("//form[@data-role='login']/descendant::input[@id='login-password']");
+	By signin_btn = By.xpath("//form[@data-role='login']/descendant::button[@type='submit']");
 	By email_txt = By.xpath("//form[@class='form form-login']/descendant::input[1]");
 	By password_txt = By.xpath("//form[@class='form form-login']/descendant::input[2]");
-	By login_btn = By.xpath("//*[@id=\"customer-email-fieldset\"]/fieldset/div[2]/div[1]/button");
-	By firstname_txt= By.xpath("//form[@id='co-shipping-form']/descendant::input[1]");
-	By lastname_txt= By.xpath("//form[@id='co-shipping-form']/descendant::input[2]");
+	By login_btn = By.xpath("//form[@data-role='login']/descendant::button[@class='action action-login secondary']");
 	By company_txt = By.xpath("//form[@id='co-shipping-form']/descendant::input[3]");
 	By street_txt = By.xpath("//form[@id='co-shipping-form']/descendant::input[4]");
 	By street2_txt = By.xpath("//form[@id='co-shipping-form']/descendant::input[5]");
 	By street3_txt = By.xpath("//form[@id='co-shipping-form']/descendant::input[6]");
 	By city_txt = By.xpath("//form[@id='co-shipping-form']/descendant::input[7]");
-	By province_txt = By.xpath("//form[@id='co-shipping-form']/descendant::select[@name='region_id']");
+	By province_select = By.xpath("//form[@id='co-shipping-form']/descendant::select[@name='region_id']");
 	By zip_txt = By.xpath("//form[@id='co-shipping-form']/descendant::input[9]");
 	By country_select = By.xpath("//form[@id='co-shipping-form']/descendant::select[@name='country_id']");
 	By phone_txt = By.xpath("//form[@id='co-shipping-form']/descendant::input[10]");
-	By shipMethod_btn = By.xpath("//form[@id='co-shipping-form']/descendant::input[11]");
+	By shipMethod_btn = By.xpath("//div[@id='checkout-shipping-method-load']/descendant::input[@value='tablerate_bestway']");
 	By next_btn = By.xpath("//form[@id='co-shipping-method-form']/descendant::button[@class='button action continue primary']");
 	By btn_shiphere = By.xpath("//footer[@class='modal-footer']/descendant::button[@class='action primary action-save-address']");
-	By btn_next = By.xpath("//div[@id='shipping-method-buttons-container']/descendant::button[@class='button action continue primary']");
-	By placeolder_btn = By.xpath("//form[@id='co-payment-form']/descendant::button[@title='Place Order']");
+	By btn_next = By.xpath("//form[@id='co-shipping-method-form']/descendant::button[@class='button action continue primary']");
+	By placeolder_btn = By.xpath("//form[@id='co-payment-form']/descendant::button[@class='action primary checkout']");
 	By checkbox_billing = By.xpath("//div[@class='payment-method-content']/descendant::input[@id='billing-address-same-as-shipping-checkmo']");
 	
 	public void addToCart ()
 	{
 		driver.findElement(cart_link).click();
-		
 	}
 	
 	public void checkout () 
 	{
 		driver.findElement(checkout_btn).click();
 	}
-	
-	public void enterEmail (String email)
+
+	public void signin()
 	{
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
-		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//form[@class='form form-login']/descendant::input[1]")));
-		driver.findElement(email_txt).sendKeys(email);
-		
-
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"checkout\"]/div[1]/button")));
+		driver.findElement(signin_Btn).click();
 	}
-	
-	public void enterPassword(String password) 
+
+	public void enterEmail (String useremail)
 	{
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//form[@class='form form-login']/descendant::input[2]")));
-		driver.findElement(password_txt).sendKeys(password);
+		driver.findElement(email_Txt).sendKeys(useremail);
 	}
-	
-	public void submit() 
+
+	public void enterPassword(String userpassword) 
 	{
-		driver.findElement(login_btn).click();
 
+		driver.findElement(password_Txt).sendKeys(userpassword);
 	}
 
-	
-	public void shippingAdress(String company,String street,String city) throws InterruptedException 
+	public void submitLogin() 
+	{
+		driver.findElement(signin_btn).click();
+	}
+
+	public void company(String company)
 	{
 		driver.findElement(company_txt).sendKeys(company);
+	}
+
+	public void street(String street)
+	{
 		driver.findElement(street_txt).sendKeys(street);
+
+	}
+
+	public void enterCity(String city) throws InterruptedException
+	{
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(city_txt));
 		driver.findElement(city_txt).sendKeys(city);
-		Thread.sleep(3000);	}
-	
+	}
+
+	public void province()
+	{
+		Select select = new Select(driver.findElement(province_select));
+		select.selectByIndex(2);
+	}
+
+
+	public void zipCode(String zip) 
+	{
+		driver.findElement(zip_txt).sendKeys(zip);
+
+	}
+
 	public void selectCountry() throws InterruptedException 
 	{
 		Select select2 = new Select(driver.findElement(country_select));
 		select2.selectByIndex(2);
 		Thread.sleep(3000);
 	}
-	
-	public void zipCode(String zip) 
-	{
-		driver.findElement(zip_txt).sendKeys(zip);
 
-	}
-	
-	public void ContinueShipping (String phone ) throws InterruptedException
+	public void phone (String phone ) throws InterruptedException
 	{
 		driver.findElement(phone_txt).sendKeys(phone);
 		Thread.sleep(3000);
-		driver.findElement(next_btn).click();
 	}
-	
-	public void checkboxBilling() 
-	{ 
-		if(!driver.findElement(checkbox_billing).isSelected()) {
-		driver.findElement(checkbox_billing).click();
+
+	public void shipingMethod() {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(6));
+		wait.until(ExpectedConditions.elementToBeClickable(shipMethod_btn));
+		driver.findElement(shipMethod_btn).click();
 	}
-			
-	}
-	
-	public void placeholder() 
+
+	public void next() 
 	{
+		driver.findElement(btn_next).click();
+	}
+
+	public void placeholder() throws InterruptedException 
+	{
+		Thread.sleep(4000);
 		driver.findElement(placeolder_btn).click();
 	}
-	
+
 	public void purchaseValidation() throws InterruptedException 
 	{
 		Thread.sleep(4000);
