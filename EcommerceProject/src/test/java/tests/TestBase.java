@@ -21,7 +21,6 @@ public class TestBase {
 		driver= new ChromeDriver(options);
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(1));
 		driver.get("https://magento.softwaretestingboard.com");
-		driver.manage().window().maximize();
 	}
 
 
