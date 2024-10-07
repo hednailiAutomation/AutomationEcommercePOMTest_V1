@@ -1,7 +1,9 @@
 package pages;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 
 public class ProductSearchPage {
@@ -39,6 +41,9 @@ public class ProductSearchPage {
 	
 	public void ChooseProduct(String qty) 
 	{
+		WebElement btn_Product = driver.findElement(btn_product);
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("arguments[0].scrollIntoView(true);", btn_Product);
 		driver.findElement(btn_product).click();
 		driver.findElement(btn_color).click();
 		driver.findElement(btn_size).click();

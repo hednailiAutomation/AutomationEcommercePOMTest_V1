@@ -3,8 +3,8 @@ package tests;
 import java.time.Duration;
 
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 
@@ -15,12 +15,14 @@ public class TestBase {
 
 	@BeforeSuite
 	public void StartDriver() {
-		ChromeOptions options = new ChromeOptions();
-		options.addArguments("--headless=new");
+		FirefoxOptions options = new FirefoxOptions();
+		driver= new FirefoxDriver(options);
 		options.addArguments("--disable-search-engine-choice-screen");
-		driver= new ChromeDriver(options);
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(1));
+		options.addPreference("dom.webnotifications.enabled", false);
+		options.addPreference("media.autoplay.default", 0);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
 		driver.get("https://magento.softwaretestingboard.com");
+		driver.manage().window().maximize();
 	}
 
 

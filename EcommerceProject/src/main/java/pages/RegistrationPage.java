@@ -19,7 +19,7 @@ public class RegistrationPage {
 	By txt_password = By.xpath("//form[@class='form create account form-create-account']/descendant::input[@id='password']");
 	By txt_passwordConfirm = By.xpath("//form[@class='form create account form-create-account']/descendant::input[@name='password_confirmation']");
 	By btn_Submit = By.xpath("//form[@class='form create account form-create-account']/descendant::button[@class='action submit primary']");
-	By btn_changePassword = By.xpath("//*[@id=\"maincontent\"]/div[2]/div[1]/div[3]/div[2]/div/div[2]/a[2]");
+	By btn_changePassword = By.xpath("/html/body/div[2]/main/div[2]/div[1]/div[3]/div[2]/div/div[2]/a[2]");
 	By txt_currentPassword = By.id("current-password");
 	By txt_newPassword = By.id("password");
 	By txt_passwordConfirmation = By.id("password-confirmation");
@@ -38,11 +38,18 @@ public class RegistrationPage {
 		driver.findElement(btn_Submit).click();
 	}
 	
-	public void changePassword(String password,String newpassword) 
+	public void changePasswordBtn() 
 	{
+		
 		driver.findElement(btn_changePassword).click();
+	}
+	
+	public void changePasswordFields(String password,String newpassword) 
+	{
 		driver.findElement(txt_currentPassword). sendKeys(password);
+		driver.findElement(txt_newPassword).clear();
 		driver.findElement(txt_newPassword).sendKeys(newpassword);
+		driver.findElement(txt_passwordConfirmation).clear();
 		driver.findElement(txt_passwordConfirmation).sendKeys(newpassword);
 		driver.findElement(btn_save).click();
 	}

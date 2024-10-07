@@ -92,7 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">14 methods,   14 passed</span>
+                    <span class="method-stats">15 methods,   15 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -171,6 +171,11 @@
                         <a href="#" panel-name="suite-e_commercePomProject" title="tests.LoginTest" class="method navigator-link" hash-for-method="ValidCredentialsLogin">ValidCredentialsLogin</a> <!-- method navigator-link -->
                       </span>
                       <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-e_commercePomProject" title="tests.RegistrationTest" class="method navigator-link" hash-for-method="changePasswordFields">changePasswordFields</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
                     </div> <!-- method-list-content passed suite-e_commercePomProject -->
                   </li>
                 </ul>
@@ -216,6 +221,13 @@
                   <a name="Registration">
                   </a> <!-- Registration -->
                   <span class="method-name">Registration</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="changePasswordFields">
+                  </a> <!-- changePasswordFields -->
+                  <span class="method-name">changePasswordFields</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -377,68 +389,72 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(14);
+data.addRows(15);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'ValidCredentialsLogin')
+data.setCell(0, 1, 'InvalidPasswordLogin')
 data.setCell(0, 2, 'tests.LoginTest')
-data.setCell(0, 3, 52556);
+data.setCell(0, 3, 34290);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'InvalidPasswordLogin')
-data.setCell(1, 2, 'tests.LoginTest')
-data.setCell(1, 3, 43612);
+data.setCell(1, 1, 'EditShipping')
+data.setCell(1, 2, 'tests.ProductOrderTest')
+data.setCell(1, 3, 27089);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'EditShipping')
-data.setCell(2, 2, 'tests.ProductOrderTest')
-data.setCell(2, 3, 26717);
+data.setCell(2, 1, 'InvalidEmailLogin')
+data.setCell(2, 2, 'tests.LoginTest')
+data.setCell(2, 3, 25196);
 data.setCell(3, 0, 3)
 data.setCell(3, 1, 'Login')
 data.setCell(3, 2, 'tests.ProductOrderTest')
-data.setCell(3, 3, 20965);
+data.setCell(3, 3, 20807);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'InvalidEmailLogin')
-data.setCell(4, 2, 'tests.LoginTest')
-data.setCell(4, 3, 20799);
+data.setCell(4, 1, 'Registration')
+data.setCell(4, 2, 'tests.RegistrationTest')
+data.setCell(4, 3, 13963);
 data.setCell(5, 0, 5)
-data.setCell(5, 1, 'Registration')
-data.setCell(5, 2, 'tests.RegistrationTest')
-data.setCell(5, 3, 11997);
+data.setCell(5, 1, 'ValidCredentialsLogin')
+data.setCell(5, 2, 'tests.LoginTest')
+data.setCell(5, 3, 9647);
 data.setCell(6, 0, 6)
-data.setCell(6, 1, 'ChangePassword')
+data.setCell(6, 1, 'changePasswordFields')
 data.setCell(6, 2, 'tests.RegistrationTest')
-data.setCell(6, 3, 7861);
+data.setCell(6, 3, 9090);
 data.setCell(7, 0, 7)
 data.setCell(7, 1, 'SearchProduct')
 data.setCell(7, 2, 'tests.ProductSearchTest')
-data.setCell(7, 3, 5762);
+data.setCell(7, 3, 6582);
 data.setCell(8, 0, 8)
-data.setCell(8, 1, 'ChooseProduct')
-data.setCell(8, 2, 'tests.ProductSearchTest')
-data.setCell(8, 3, 4590);
+data.setCell(8, 1, 'EmptyCredentialsLogin')
+data.setCell(8, 2, 'tests.LoginTest')
+data.setCell(8, 3, 5399);
 data.setCell(9, 0, 9)
-data.setCell(9, 1, 'FinishShipping')
-data.setCell(9, 2, 'tests.ProductOrderTest')
-data.setCell(9, 3, 4315);
+data.setCell(9, 1, 'ChooseProduct')
+data.setCell(9, 2, 'tests.ProductSearchTest')
+data.setCell(9, 3, 5233);
 data.setCell(10, 0, 10)
-data.setCell(10, 1, 'AddToCartProduct')
-data.setCell(10, 2, 'tests.AddProductToCartTest')
-data.setCell(10, 3, 3873);
+data.setCell(10, 1, 'FinishShipping')
+data.setCell(10, 2, 'tests.ProductOrderTest')
+data.setCell(10, 3, 4111);
 data.setCell(11, 0, 11)
-data.setCell(11, 1, 'SignOut')
-data.setCell(11, 2, 'tests.LoginTest')
-data.setCell(11, 3, 3193);
+data.setCell(11, 1, 'AddToCartProduct')
+data.setCell(11, 2, 'tests.AddProductToCartTest')
+data.setCell(11, 3, 3733);
 data.setCell(12, 0, 12)
-data.setCell(12, 1, 'SortProduct')
-data.setCell(12, 2, 'tests.ProductSearchTest')
-data.setCell(12, 3, 3137);
+data.setCell(12, 1, 'SignOut')
+data.setCell(12, 2, 'tests.LoginTest')
+data.setCell(12, 3, 3438);
 data.setCell(13, 0, 13)
-data.setCell(13, 1, 'EmptyCredentialsLogin')
-data.setCell(13, 2, 'tests.LoginTest')
-data.setCell(13, 3, 2846);
+data.setCell(13, 1, 'SortProduct')
+data.setCell(13, 2, 'tests.ProductSearchTest')
+data.setCell(13, 3, 2972);
+data.setCell(14, 0, 14)
+data.setCell(14, 1, 'ChangePassword')
+data.setCell(14, 2, 'tests.RegistrationTest')
+data.setCell(14, 3, 2703);
 window.suiteTableData['e_commercePomProject']= { tableData: data, tableDiv: 'times-div-e_commercePomProject'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 3 minutes</span>
+              <span class="suite-total-time">Total running time: 2 minutes</span>
               <div id="times-div-e_commercePomProject">
               </div> <!-- times-div-e_commercePomProject -->
             </div> <!-- times-div -->
@@ -507,78 +523,82 @@ return data;
               </div> <!-- configuration-suite before -->
               <div class="test-method">
                 <span class="method-name">Registration</span>
-                <span class="method-start">12682 ms</span>
+                <span class="method-start">18747 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">ChangePassword</span>
-                <span class="method-start">24945 ms</span>
+                <span class="method-start">32976 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">changePasswordFields</span>
+                <span class="method-start">35699 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">tests.LoginTest</div> <!-- chronological-class-name -->
               <div class="test-method">
-                <span class="method-name">InvalidEmailLogin</span>
-                <span class="method-start">32832 ms</span>
+                <span class="method-name">InvalidPasswordLogin</span>
+                <span class="method-start">44802 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">InvalidPasswordLogin</span>
-                <span class="method-start">53646 ms</span>
+                <span class="method-name">InvalidEmailLogin</span>
+                <span class="method-start">79102 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">EmptyCredentialsLogin</span>
-                <span class="method-start">97273 ms</span>
+                <span class="method-start">104308 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">ValidCredentialsLogin</span>
-                <span class="method-start">100131 ms</span>
+                <span class="method-start">109718 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">SignOut</span>
-                <span class="method-start">152697 ms</span>
+                <span class="method-start">119375 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">tests.ProductSearchTest</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">SearchProduct</span>
-                <span class="method-start">155902 ms</span>
+                <span class="method-start">122825 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">SortProduct</span>
-                <span class="method-start">161678 ms</span>
+                <span class="method-start">129420 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">ChooseProduct</span>
-                <span class="method-start">164826 ms</span>
+                <span class="method-start">132405 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">tests.AddProductToCartTest</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">AddToCartProduct</span>
-                <span class="method-start">169428 ms</span>
+                <span class="method-start">137649 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">tests.ProductOrderTest</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">Login</span>
-                <span class="method-start">173323 ms</span>
+                <span class="method-start">141401 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">EditShipping</span>
-                <span class="method-start">194297 ms</span>
+                <span class="method-start">162217 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">FinishShipping</span>
-                <span class="method-start">221030 ms</span>
+                <span class="method-start">189317 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">tests.RegistrationTest</div> <!-- chronological-class-name -->
               <div class="configuration-suite after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">225855 ms</span>
+                <span class="method-start">193789 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
