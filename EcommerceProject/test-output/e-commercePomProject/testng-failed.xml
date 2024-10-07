@@ -3,47 +3,13 @@
 <suite name="Failed suite [e-commercePomProject]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Regression-test(failed)">
     <classes>
-      <class name="tests.AddProductToCartTest">
-        <methods>
-          <include name="AddToCartProduct"/>
-          <include name="tearDown"/>
-          <include name="StartDriver"/>
-        </methods>
-      </class> <!-- tests.AddProductToCartTest -->
-      <class name="tests.RegistrationTest">
-        <methods>
-          <include name="tearDown"/>
-        </methods>
-      </class> <!-- tests.RegistrationTest -->
       <class name="tests.ProductOrderTest">
         <methods>
-          <include name="EditShipping"/>
           <include name="FinishShipping"/>
           <include name="tearDown"/>
-          <include name="Login"/>
           <include name="StartDriver"/>
         </methods>
       </class> <!-- tests.ProductOrderTest -->
-      <class name="tests.LoginTest">
-        <methods>
-          <include name="SignOut"/>
-          <include name="ValidCredentialsLogin"/>
-          <include name="EmptyCredentialsLogin"/>
-          <include name="InvalidEmailLogin"/>
-          <include name="InvalidPasswordLogin"/>
-          <include name="tearDown"/>
-          <include name="StartDriver"/>
-        </methods>
-      </class> <!-- tests.LoginTest -->
-      <class name="tests.ProductSearchTest">
-        <methods>
-          <include name="ChooseProduct"/>
-          <include name="tearDown"/>
-          <include name="SearchProduct"/>
-          <include name="StartDriver"/>
-          <include name="SortProduct"/>
-        </methods>
-      </class> <!-- tests.ProductSearchTest -->
     </classes>
   </test> <!-- Regression-test(failed) -->
 </suite> <!-- Failed suite [e-commercePomProject] -->

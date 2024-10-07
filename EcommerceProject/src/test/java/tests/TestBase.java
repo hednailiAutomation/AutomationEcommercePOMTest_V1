@@ -16,13 +16,12 @@ public class TestBase {
 	@BeforeSuite
 	public void StartDriver() {
 		FirefoxOptions options = new FirefoxOptions();
-		driver= new FirefoxDriver(options);
+		options.addArguments("--headless");
+		options.addArguments("--disable-gpu");
 		options.addArguments("--disable-search-engine-choice-screen");
-		options.addPreference("dom.webnotifications.enabled", false);
-		options.addPreference("media.autoplay.default", 0);
+		driver= new FirefoxDriver(options);
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
 		driver.get("https://magento.softwaretestingboard.com");
-		driver.manage().window().maximize();
 	}
 
 

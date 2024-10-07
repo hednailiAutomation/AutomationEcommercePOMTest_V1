@@ -1,10 +1,6 @@
 package tests;
 
-import java.time.Duration;
-
 import org.openqa.selenium.By;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
 import io.qameta.allure.Description;
@@ -17,7 +13,7 @@ public class LoginTest extends TestBase{
  
 	LoginPage lp = new LoginPage(driver);
 	
-	String email = "test.myppBalk99879@gmail.com";
+	String email = "test.myppBalk99971@gmail.com";
 	String validpwd = "123456aB-";
 	String invalidEmail1 = "123abc@";
 	String invalidEmail2 = "123abc.com";

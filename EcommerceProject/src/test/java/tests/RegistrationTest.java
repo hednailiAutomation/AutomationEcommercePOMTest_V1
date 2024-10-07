@@ -7,7 +7,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
-import org.testng.AssertJUnit;
 import org.testng.annotations.Test;
 
 import io.qameta.allure.Description;
@@ -20,7 +19,7 @@ public class RegistrationTest extends TestBase{
 	RegistrationPage rp = new RegistrationPage(driver);
 	String firstname = "Jean";
 	String lastname = "Brown";
-	String email = "test.myppBalk99879@gmail.com";
+	String email = "test.myppBalk99971@gmail.com";
 	String password = "223456zE-";
 	String newpassword = "123456aB-";
 
