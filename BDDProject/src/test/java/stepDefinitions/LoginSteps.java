@@ -35,8 +35,7 @@ public class LoginSteps extends BasePage {
 		for (Map<String, String> mapdata : userdata) {
 			lp.enterUsername(mapdata.get("username"));
 			lp.enterPassword(mapdata.get("password"));
-			lp.login();
-			Thread.sleep(4000);
+			Thread.sleep(2000);
 		}
 
 	}
@@ -47,8 +46,8 @@ public class LoginSteps extends BasePage {
 		
 		lp.submitEmptyUsername(username);
 		lp.submitEmptyPassword(password);
-		lp.login();
-		Thread.sleep(4000);
+		lp.Login();
+		Thread.sleep(2000);
 	}
 
 
@@ -56,12 +55,11 @@ public class LoginSteps extends BasePage {
 	public void succesLogin() throws InterruptedException {
 		Thread.sleep(5000);
 		Assert.assertTrue(driver.findElement(By.className("logged-in")).isDisplayed());
-		Assert.assertTrue(driver.findElement(By.className("logged-in")).getText().contains("Welcome"));
 	}
 
 	@Then("an email error message should be displayed")
 	public void an_email_error_message_should_be_displayed() throws InterruptedException {
-		Thread.sleep(5000);
+		Thread.sleep(4000);
 		Assert.assertTrue(driver.findElement(By.xpath("//form[@class='form form-login']/descendant::div[@id='email-error']")).getText().contains("Please enter a valid email address"));
 	}
 

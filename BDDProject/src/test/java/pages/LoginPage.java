@@ -40,7 +40,7 @@ public class LoginPage {
 
 	}
 
-	public void login()
+	public void Login()
 	{
 		driver.findElement(btn_signin).click();
 	}
