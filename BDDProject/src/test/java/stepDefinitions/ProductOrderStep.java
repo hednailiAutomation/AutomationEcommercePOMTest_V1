@@ -16,18 +16,18 @@ public class ProductOrderStep extends BasePage {
 
 	@When("user hits on cart link")
 	public void user_hits_on_cart_link() {
-		addtocart.addToCart();
+		addtocart.addProductToCart();
 	}
 
 	@And("hits the checkout button")
 	public void hits_the_checkout_button() {
-		addtocart.checkout();
+		addtocart.checkoutBtn();
 	}
 	
 	@And("hits the sign in button")
 	public void hits_the_signin_button() 
 	{
-		addtocart.signin();
+		addtocart.userSignin();
 	}
 	
 	@And("enters the email {string}")

@@ -7,6 +7,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 
 public class ProductorderPage {
 
@@ -138,6 +139,6 @@ public class ProductorderPage {
 	public void purchaseValidation() throws InterruptedException 
 	{
 		Thread.sleep(4000);
-		org.junit.Assert.assertEquals(driver.findElement(By.xpath("//span[@class='base']")).getText(), "Thank you for your purchase!");
+		Assert.assertEquals(driver.findElement(By.xpath("//span[@class='base']")).getText(), "Thank you for your purchase!");
 	}
 }
