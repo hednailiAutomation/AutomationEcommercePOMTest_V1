@@ -53,7 +53,7 @@ public class LoginSteps extends BasePage {
 
 	@Then("user is navigated to home page")
 	public void succesLogin() throws InterruptedException {
-		Thread.sleep(5000);
+		Thread.sleep(7000);
 		Assert.assertTrue(driver.findElement(By.className("logged-in")).isDisplayed());
 	}
 

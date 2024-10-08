@@ -10,10 +10,10 @@ Feature: login functionality
     Then user is navigated to home page
 
     Examples: 
-      | username               | password  |
-      | Moez9921.chkir@test.fr | 123456Ab- |
+      | username              | password  |
+      | Moez933.chkir@test.fr | 123456Ab- |
 
-  @InvalidCredentials1
+  @InvalidCredentials
   Scenario Outline: Check login with invalid e-mail and invalid password
     When user enters "<username>" and "<password>"
     And hits on login button
@@ -23,7 +23,7 @@ Feature: login functionality
       | username  | password  |
       | @test.com | 123456789 |
 
-  @InvalidCredentials2
+  @InvalidCredentials
   Scenario Outline: Check login with invalid e-mail and valid password
     When user enters "<username>" and "<password>"
     And hits on login button
@@ -36,19 +36,19 @@ Feature: login functionality
       | 123abc     | 123456Ab- |
       | @.com      | 123456Ab- |
 
-  @InvalidCredentials3
+  @InvalidCredentials
   Scenario Outline: Check login with valid e-mail and invalid password
     When user enters "<username>" and "<password>"
     And hits on login button
     Then a password error message should be displayed
 
     Examples: 
-      | username               | password  |
-      | Moez9921.chkir@test.fr | abcdefgh  |
-      | Moez9921.chkir@test.fr | 123456789 |
-      | Moez9921.chkir@test.fr | 1234Ab-   |
+      | username              | password  |
+      | Moez933.chkir@test.fr | abcdefgh  |
+      | Moez933.chkir@test.fr | 123456789 |
+      | Moez933.chkir@test.fr | 1234Ab-   |
 
-  @InvalidCredentials4
+  @InvalidCredentials
   Scenario: Check login with empty credentials
     When user enters "" and "" for credentials
     And hits on login button

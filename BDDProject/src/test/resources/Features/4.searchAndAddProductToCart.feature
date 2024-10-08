@@ -3,7 +3,6 @@ Feature: Search For Product
   Background: 
     Given user is on home page
 
-
   @AutoSuggestSearch
   Scenario: Search Product with Auto-Suggestion
     When user enters a part of productname "jacke" in the search box

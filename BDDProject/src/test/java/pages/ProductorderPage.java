@@ -39,7 +39,7 @@ public class ProductorderPage {
 	By next_btn = By.xpath("//form[@id='co-shipping-method-form']/descendant::button[@class='button action continue primary']");
 	By btn_shiphere = By.xpath("//footer[@class='modal-footer']/descendant::button[@class='action primary action-save-address']");
 	By btn_next = By.xpath("//form[@id='co-shipping-method-form']/descendant::button[@class='button action continue primary']");
-	By placeolder_btn = By.xpath("//form[@id='co-payment-form']/descendant::button[@class='action primary checkout']");
+	By placeorder_btn = By.xpath("//form[@id='co-payment-form']/descendant::button[@class='action primary checkout']");
 	By checkbox_billing = By.xpath("//div[@class='payment-method-content']/descendant::input[@id='billing-address-same-as-shipping-checkmo']");
 	
 	public void addProductToCart ()
@@ -127,13 +127,17 @@ public class ProductorderPage {
 
 	public void nextBtn() 
 	{
+		WebDriverWait wait =new WebDriverWait(driver, Duration.ofSeconds(4));
+		wait.until(ExpectedConditions.elementToBeClickable(btn_next));
 		driver.findElement(btn_next).click();
 	}
 
 	public void placeholderBtn() throws InterruptedException 
 	{
-		Thread.sleep(4000);
-		driver.findElement(placeolder_btn).click();
+		
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(7));
+		wait.until(ExpectedConditions.elementToBeClickable(placeorder_btn));
+		driver.findElement(placeorder_btn).click();
 	}
 
 	public void purchaseValidation() throws InterruptedException 
