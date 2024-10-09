@@ -11,25 +11,16 @@ import pages.AddProductToCartPage;
 
 public class AddProductToCartTest extends TestBase{
 
-	AddProductToCartPage addProduct;
+	AddProductToCartPage addProduct = new AddProductToCartPage(driver);
 
 
 
-	@Test(priority=1)
+	@Test()
 	public void AddToCartProduct() throws InterruptedException
 	{
-		addProduct = new AddProductToCartPage(driver);
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		wait.until(ExpectedConditions.textToBePresentInElementLocated(By.cssSelector("span.counter-number"), "2"));
 		addProduct.AddToCart();
 		
 	}
-
-	/*@Test(priority=2)
-	public void ContinueShip()
-	{
-		addProduct  = new AddProductToCartPage(driver);
-		addProduct.Continue();
-	}*/
-
 }

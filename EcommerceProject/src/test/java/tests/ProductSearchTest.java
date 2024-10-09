@@ -1,6 +1,6 @@
 package tests;
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.Test;
 
 import io.qameta.allure.Severity;
@@ -11,12 +11,10 @@ import pages.ProductSearchPage;
 
 public class ProductSearchTest extends TestBase {
 
-	ProductSearchPage ps;
-	LoginPage lp;
-	String productName = "Jacket";
+	ProductSearchPage ps = new  ProductSearchPage(driver);
+	LoginPage lp = new LoginPage(driver);
+	String productName = "Jack";
 	String nbr= "2";
-	String email = "test.myppBaz9991@gmail.com";
-	String newpwd = "123456aB.";
 	String qty = "2";
 
 
@@ -26,7 +24,6 @@ public class ProductSearchTest extends TestBase {
 	@Severity(SeverityLevel.MINOR)
 	void SearchProduct()
 	{
-		ps = new ProductSearchPage(driver);
 		ps.SearchForProduct(productName);
 	}
 
@@ -34,17 +31,15 @@ public class ProductSearchTest extends TestBase {
 	@Severity(SeverityLevel.MINOR)
 	void SortProduct()
 	{
-		ps=new ProductSearchPage(driver);
 		ps.SortProduct();
 	}
 
-	@Test(priority=3)
+	@Test(priority = 3)
 	@Severity(SeverityLevel.MINOR)
-	void ChooseProduct()
-	{
-		ps =new ProductSearchPage(driver);
-		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("window.scrollBy(0, 1100)");
+	void ChooseProduct() {
+		Actions action = new Actions(driver);
+		action.scrollToElement(driver.findElement(
+				By.xpath("//main[@id='maincontent']/descendant::img[@alt='Lando Gym Jacket']"))).perform();
 		ps.ChooseProduct(qty);
 		Assert.assertTrue(driver.findElement(By.className("swatch-attribute-selected-option")).isDisplayed());
 	}

@@ -14,17 +14,18 @@ import junit.framework.Assert;
 import pages.LoginPage;
 
 public class LoginTest extends TestBase{
-
-	LoginPage lp ;
-	String email = "test.myppBaz9993@gmail.com";
-	String validpwd = "123456Ab.";
+ 
+	LoginPage lp = new LoginPage(driver);
+	
+	String email = "test.myppBalk126@gmail.com";
+	String validpwd = "123456aB-";
 	String invalidEmail1 = "123abc@";
 	String invalidEmail2 = "123abc.com";
 	String invalidEmail3 = "123abc";
 	String invalidPwd1 = "abcdefgh";
 	String invalidPwd2 = "123456789";
 	String invalidPwd3 = "123Ab.";
-	String newpwd  ="123456aB.";
+
 
 
 	@Test(priority=1)
@@ -32,7 +33,6 @@ public class LoginTest extends TestBase{
 	@Severity(SeverityLevel.CRITICAL)
 	void  InvalidEmailLogin() throws InterruptedException
 	{
-		lp=new LoginPage(driver);
 		lp.login(invalidEmail1,validpwd);
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(2));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("send2")));
@@ -52,7 +52,6 @@ public class LoginTest extends TestBase{
 	@Description("Verify login fonctionality with valid email / invalid password")
 	void  InvalidPasswordLogin() throws InterruptedException
 	{
-		lp=new LoginPage(driver);
 		lp.login(email,invalidPwd1);
 		Thread.sleep(3000);
 		Assert.assertTrue(driver.findElement(By.xpath("//*[@id=\"maincontent\"]/div[2]/div[2]/div/div")).isDisplayed());
@@ -68,7 +67,6 @@ public class LoginTest extends TestBase{
 	@Description("Verify login fontionnality with empty input credentials")
 	void EmptyCredentialsLogin()
 	{
-		lp= new LoginPage(driver);
 		lp.login("","");
 		Assert.assertTrue(driver.findElement(By.id("email-error")).isDisplayed());
 	}
@@ -78,8 +76,7 @@ public class LoginTest extends TestBase{
 	@Severity(SeverityLevel.BLOCKER)
 	void ValidCredentialsLogin() throws InterruptedException
 	{
-		lp = new LoginPage(driver);
-		lp.login(email,newpwd);
+		lp.login(email,validpwd);
 		Thread.sleep(3000);
 		Assert.assertTrue(driver.findElement(By.className("logged-in")).isDisplayed());
 	}
@@ -87,7 +84,6 @@ public class LoginTest extends TestBase{
 	@Test(priority=5)
 	void SignOut() throws InterruptedException 
 	{
-		lp = new LoginPage(driver);
 		Thread.sleep(1000);
 		lp.Signout();
 	}

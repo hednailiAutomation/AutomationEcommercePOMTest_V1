@@ -90,7 +90,6 @@ public class ProductOrderPage {
 	{
 		driver.findElement(phone_txt).sendKeys(phone);
 		Thread.sleep(3000);
-		//driver.findElement(shipMethod_btn).click();
 		driver.findElement(next_btn).click();
 	}
 

@@ -16,12 +16,12 @@ import pages.RegistrationPage;
 
 public class RegistrationTest extends TestBase{
 
-	RegistrationPage rp ;
+	RegistrationPage rp = new RegistrationPage(driver);
 	String firstname = "MICHEL";
-	String lastname = "ZOUL";
-	String email = "test.myppBaz9993@gmail.com";
-	String pwd = "123456Ab.";
-	String newpwd = "123456aB.";
+	String lastname = "ZOULA";
+	String email = "test.myppBalk126@gmail.com";
+	String pwd = "123456zE-";
+	String newpwd = "123456aB-";
 
 
 
@@ -31,16 +31,15 @@ public class RegistrationTest extends TestBase{
 
 	void Registration() throws InterruptedException
 	{
-		rp = new RegistrationPage(driver);
 		rp.createAccount(firstname,lastname,email,pwd);
 		AssertJUnit.assertEquals("My Account", driver.findElement(By.className("base")).getText());
 	}
 
 	@Test(priority=2)
-
+	@Description("ChangePassword")
+	@Severity(SeverityLevel.CRITICAL)
 	void ChangePassword () 
 	{
-		rp = new RegistrationPage(driver);
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[@class='customer-name']/descendant::button[@class='action switch']")));
 		rp.changePassword(pwd,newpwd);
