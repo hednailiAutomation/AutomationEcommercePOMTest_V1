@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="EcommercePomTestSuite">
-  <test name="testng" preserve-order="true">
+<suite name="EcommercePOMTestSuite" preserve-order="true">
+  <test name="end_to_end">
     <classes>
+		<class name = "tests.RegistrationTest"/>
+		<class name ="tests.LoginTest"/>
 		<class name="tests.ProductSearchTest"/>
-		<class name="tests.ProductOrderTest"/>
 		<class name="tests.AddProductToCartTest"/>
+		<class name="tests.ProductOrderTest"/>
+		
     </classes>
   </test>
 </suite>

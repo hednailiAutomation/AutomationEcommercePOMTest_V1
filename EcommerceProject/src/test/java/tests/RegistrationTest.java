@@ -18,8 +18,8 @@ public class RegistrationTest extends TestBase{
 
 	RegistrationPage rp = new RegistrationPage(driver);
 	String firstname = "MICHEL";
-	String lastname = "ZOUL";
-	String email = "test.myppBalk16@gmail.com";
+	String lastname = "ZOULA";
+	String email = "test.myppBalk126@gmail.com";
 	String pwd = "123456zE-";
 	String newpwd = "123456aB-";
 
