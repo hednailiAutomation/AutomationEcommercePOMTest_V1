@@ -5,7 +5,7 @@ Feature: Change Password
 
   @ChangePassword
   Scenario: Check logged in user can change password
-    When user enters "Moez933.chkir@test.fr" and "123456aB-"
+    When user enters "Moez934.chkir@test.fr" and "123456aB-"
     And hits on login button
     And select my account
     And clicks on change password link
