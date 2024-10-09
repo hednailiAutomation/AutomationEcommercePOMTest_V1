@@ -19,7 +19,6 @@ public class TestBase {
 	public void StartDriver() {
 		ChromeOptions options = new ChromeOptions();
 		options.addArguments("--disable-search-engine-choice-screen");
-		WebDriverManager.chromedriver().setup();
 		driver= new ChromeDriver(options);
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(1));
 		driver.get("https://magento.softwaretestingboard.com");
