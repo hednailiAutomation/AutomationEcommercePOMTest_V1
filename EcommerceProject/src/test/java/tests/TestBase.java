@@ -17,6 +17,7 @@ public class TestBase {
 	public void StartDriver() {
 		ChromeOptions options = new ChromeOptions();
 		options.addArguments("--headless=new");
+		options.addArguments("--disable-gpu");
 		options.addArguments("--disable-search-engine-choice-screen");
 		driver= new ChromeDriver(options);
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(1));
