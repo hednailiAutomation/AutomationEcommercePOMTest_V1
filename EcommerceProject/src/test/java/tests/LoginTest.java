@@ -17,7 +17,7 @@ public class LoginTest extends TestBase{
  
 	LoginPage lp = new LoginPage(driver);
 	
-	String email = "test.myppBalk179@gmail.com";
+	String email = "test.myppBalk279@gmail.com";
 	String validpwd = "123456aB-";
 	String invalidEmail1 = "123abc@";
 	String invalidEmail2 = "123abc.com";
