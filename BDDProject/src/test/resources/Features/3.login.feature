@@ -11,17 +11,7 @@ Feature: login functionality
 
     Examples: 
       | username              | password  |
-      | Moez935.chkir@test.fr | 123456Ab- |
-
-  @InvalidCredentials
-  Scenario Outline: Check login with invalid e-mail and invalid password
-    When user enters "<username>" and "<password>"
-    And hits on login button
-    Then an email error message should be displayed
-
-    Examples: 
-      | username  | password  |
-      | @test.com | 123456789 |
+      | Moez936.chkir@test.fr | 123456Ab- |
 
   @InvalidCredentials
   Scenario Outline: Check login with invalid e-mail and valid password
@@ -35,6 +25,16 @@ Feature: login functionality
       | 123abc.com | 123456Ab- |
       | 123abc     | 123456Ab- |
       | @.com      | 123456Ab- |
+      
+       @InvalidCredentials
+  Scenario Outline: Check login with invalid e-mail and invalid password
+    When user enters "<username>" and "<password>"
+    And hits on login button
+    Then an email error message should be displayed
+
+    Examples: 
+      | username  | password  |
+      | @test.com | 123456789 |
 
   @InvalidCredentials
   Scenario Outline: Check login with valid e-mail and invalid password
@@ -44,9 +44,9 @@ Feature: login functionality
 
     Examples: 
       | username              | password  |
-      | Moez935.chkir@test.fr | abcdefgh  |
-      | Moez935.chkir@test.fr | 123456789 |
-      | Moez935.chkir@test.fr | 1234Ab-   |
+      | Moez936.chkir@test.fr | abcdefgh  |
+      | Moez936.chkir@test.fr | 123456789 |
+      | Moez936.chkir@test.fr | 1234Ab-   |
 
   @InvalidCredentials
   Scenario: Check login with empty credentials
