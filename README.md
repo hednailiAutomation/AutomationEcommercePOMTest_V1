@@ -1,3 +1,5 @@
-Ecommerce_POM_Project with Allure reports
--Allure-reports integrated with this POM Project
--You have to modify 'user e-mail' in *RegistrationTest *LoginTest and *ProductSearchTest to success all Suite tests!
+E-commerce_Page_Object_Model_Project using Allure reports
+
+* Chrome version
+* Allure-reports integrated with this POM Project
+* You have to modify the 'user e-mail' in *RegistrationTest *LoginTest and *ProductSearchTest to succeed the Suite test!
