@@ -1,4 +1,4 @@
-E-commerce_Page_Object_Model_Project_Using_Cucumber
+E-commerce Page_Object_Model Project Using Cucumber
 
 * Headless Firefox version
 * Integrate Behavior Driven Devolpement in a Page Object Model e-commerce testing project 
