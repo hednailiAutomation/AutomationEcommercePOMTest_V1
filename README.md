@@ -1,4 +1,4 @@
-E-commerce_Page_Object_Model_Project using Allure reports
+E-commerce Page_Object_Model Project using Allure reports
 
 * Chrome version
 * Allure-reports integrated with this POM Project
