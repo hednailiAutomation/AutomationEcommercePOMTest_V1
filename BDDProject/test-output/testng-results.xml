@@ -1,61 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="20" passed="18" failed="2" skipped="0">
+<testng-results ignored="0" total="3" passed="0" failed="3" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-10-08T13:12:07 GMT+01:00" name="Default suite" finished-at="2024-10-08T13:21:42 GMT+01:00" duration-ms="575390">
+  <suite started-at="2024-10-10T19:59:32 GMT+01:00" name="Default suite" finished-at="2024-10-10T20:00:13 GMT+01:00" duration-ms="40674">
     <groups>
       <group name="cucumber">
         <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testng.runner.RunCucumberTest@33065d67]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2024-10-08T13:12:07 GMT+01:00" name="Default test" finished-at="2024-10-08T13:21:42 GMT+01:00" duration-ms="575390">
+    <test started-at="2024-10-10T19:59:32 GMT+01:00" name="Default test" finished-at="2024-10-10T20:00:13 GMT+01:00" duration-ms="40674">
       <class name="testng.runner.RunCucumberTest">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:testng.runner.RunCucumberTest@33065d67]" started-at="2024-10-08T13:12:07 GMT+01:00" name="setUpClass" finished-at="2024-10-08T13:12:09 GMT+01:00" duration-ms="2398" status="PASS">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:testng.runner.RunCucumberTest@33065d67]" started-at="2024-10-10T19:59:32 GMT+01:00" name="setUpClass" finished-at="2024-10-10T19:59:35 GMT+01:00" duration-ms="2475" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@166ddfb7]]>
+                <![CDATA[org.testng.TestRunner@21505815]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testng.runner.RunCucumberTest@33065d67]" started-at="2024-10-08T13:12:09 GMT+01:00" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-10-08T13:12:37 GMT+01:00" duration-ms="27342" status="FAIL">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testng.runner.RunCucumberTest@33065d67]" started-at="2024-10-10T19:59:35 GMT+01:00" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-10-10T19:59:50 GMT+01:00" duration-ms="15041" status="FAIL">
           <params>
             <param index="0">
               <value>
-                <![CDATA["Check registration with all required fields"]]>
+                <![CDATA["Search Product with Auto-Suggestion"]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA["Registration Fonctionality"]]>
+                <![CDATA["Search For Product"]]>
               </value>
             </param>
           </params>
           <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//main[@id='maincontent']/descendant::div[@class='message-success success message']"}
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//form[@id='search_mini_form']/descendant::input[@class='input-text']"}
   (Session info: chrome=129.0.6668.90)
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: '4.25.0', revision: '8a8aea2337'
 System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.24'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [99da1329864d808cc5669d7b861a634c, findElement {value=//main[@id='maincontent']/descendant::div[@class='message-success success message'], using=xpath}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 129.0.6668.90, chrome: {chromedriverVersion: 129.0.6668.89 (951c0b97221f..., userDataDir: C:\Users\hedi\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51915}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51915/devtoo..., se:cdpVersion: 129.0.6668.90, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 99da1329864d808cc5669d7b861a634c]]>
+Command: [519d9b4648eb41035c619565bec39e37, findElement {value=//form[@id='search_mini_form']/descendant::input[@class='input-text'], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 129.0.6668.90, chrome: {chromedriverVersion: 129.0.6668.100 (cf58cba358d..., userDataDir: C:\Users\hedi\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50283}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50283/devtoo..., se:cdpVersion: 129.0.6668.90, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 519d9b4648eb41035c619565bec39e37]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//main[@id='maincontent']/descendant::div[@class='message-success success message']"}
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//form[@id='search_mini_form']/descendant::input[@class='input-text']"}
   (Session info: chrome=129.0.6668.90)
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: '4.25.0', revision: '8a8aea2337'
 System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.24'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [99da1329864d808cc5669d7b861a634c, findElement {value=//main[@id='maincontent']/descendant::div[@class='message-success success message'], using=xpath}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 129.0.6668.90, chrome: {chromedriverVersion: 129.0.6668.89 (951c0b97221f..., userDataDir: C:\Users\hedi\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51915}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51915/devtoo..., se:cdpVersion: 129.0.6668.90, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 99da1329864d808cc5669d7b861a634c
+Command: [519d9b4648eb41035c619565bec39e37, findElement {value=//form[@id='search_mini_form']/descendant::input[@class='input-text'], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 129.0.6668.90, chrome: {chromedriverVersion: 129.0.6668.100 (cf58cba358d..., userDataDir: C:\Users\hedi\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50283}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50283/devtoo..., se:cdpVersion: 129.0.6668.90, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 519d9b4648eb41035c619565bec39e37
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -71,313 +71,15 @@ at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(Elemen
 at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
 at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
 at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
-at stepDefinitions.RegistrationSteps.registration_confirm_message_is_displayed(RegistrationSteps.java:59)
-at ✽.registration confirm message is displayed(file:///C:/Users/hedi/eclipse-workspace/AutomationWebTest_POM_V1/BDDProject/src/test/resources/Features/1.registration.feature:14)
+at stepDefinitions.AutoSuggestSearcAndAddToCartStep.user_is_on_home_page(AutoSuggestSearcAndAddToCartStep.java:24)
+at ✽.user is on home page(file:///C:/Users/hedi/eclipse-workspace/AutomationWebTest_POM_V1/BDDProject/src/test/resources/Features/4.searchAndAddProductToCart.feature:4)
 ]]>
             </full-stacktrace>
           </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testng.runner.RunCucumberTest@33065d67]" started-at="2024-10-08T13:12:37 GMT+01:00" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-10-08T13:12:58 GMT+01:00" duration-ms="21558" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Check registration when skip a required field"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Registration Fonctionality"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testng.runner.RunCucumberTest@33065d67]" started-at="2024-10-08T13:12:58 GMT+01:00" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-10-08T13:13:20 GMT+01:00" duration-ms="21503" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Check Registration with existing user e-mail"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Registration Fonctionality"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testng.runner.RunCucumberTest@33065d67]" started-at="2024-10-08T13:13:20 GMT+01:00" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-10-08T13:13:52 GMT+01:00" duration-ms="32278" status="FAIL">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Check login with valid credentials"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["login functionality"]]>
-              </value>
-            </param>
-          </params>
-          <exception class="org.openqa.selenium.NoSuchElementException">
-            <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"css selector","selector":".logged\-in"}
-  (Session info: chrome=129.0.6668.90)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: '4.25.0', revision: '8a8aea2337'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.24'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [e557ad31d5a3ffd0da2fc7f7bb1ef624, findElement {value=logged-in, using=class name}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 129.0.6668.90, chrome: {chromedriverVersion: 129.0.6668.89 (951c0b97221f..., userDataDir: C:\Users\hedi\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52010}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52010/devtoo..., se:cdpVersion: 129.0.6668.90, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: e557ad31d5a3ffd0da2fc7f7bb1ef624]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":".logged\-in"}
-  (Session info: chrome=129.0.6668.90)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: '4.25.0', revision: '8a8aea2337'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.24'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [e557ad31d5a3ffd0da2fc7f7bb1ef624, findElement {value=logged-in, using=class name}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 129.0.6668.90, chrome: {chromedriverVersion: 129.0.6668.89 (951c0b97221f..., userDataDir: C:\Users\hedi\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52010}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52010/devtoo..., se:cdpVersion: 129.0.6668.90, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: e557ad31d5a3ffd0da2fc7f7bb1ef624
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
-at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
-at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:66)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
-at stepDefinitions.LoginSteps.succesLogin(LoginSteps.java:57)
-at ✽.user is navigated to home page(file:///C:/Users/hedi/eclipse-workspace/AutomationWebTest_POM_V1/BDDProject/src/test/resources/Features/2.login.feature:10)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testng.runner.RunCucumberTest@33065d67]" started-at="2024-10-08T13:13:52 GMT+01:00" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-10-08T13:14:19 GMT+01:00" duration-ms="27530" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Check login with invalid e-mail and invalid password"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["login functionality"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testng.runner.RunCucumberTest@33065d67]" started-at="2024-10-08T13:14:19 GMT+01:00" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-10-08T13:14:44 GMT+01:00" duration-ms="24214" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Check login with invalid e-mail and valid password"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["login functionality"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testng.runner.RunCucumberTest@33065d67]" started-at="2024-10-08T13:14:44 GMT+01:00" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-10-08T13:15:09 GMT+01:00" duration-ms="24916" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Check login with invalid e-mail and valid password"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["login functionality"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testng.runner.RunCucumberTest@33065d67]" started-at="2024-10-08T13:15:09 GMT+01:00" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-10-08T13:15:37 GMT+01:00" duration-ms="28529" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Check login with invalid e-mail and valid password"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["login functionality"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testng.runner.RunCucumberTest@33065d67]" started-at="2024-10-08T13:15:37 GMT+01:00" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-10-08T13:16:02 GMT+01:00" duration-ms="24849" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Check login with invalid e-mail and valid password"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["login functionality"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testng.runner.RunCucumberTest@33065d67]" started-at="2024-10-08T13:16:02 GMT+01:00" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-10-08T13:16:25 GMT+01:00" duration-ms="23114" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Check login with valid e-mail and invalid password"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["login functionality"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testng.runner.RunCucumberTest@33065d67]" started-at="2024-10-08T13:16:25 GMT+01:00" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-10-08T13:16:46 GMT+01:00" duration-ms="21110" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Check login with valid e-mail and invalid password"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["login functionality"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testng.runner.RunCucumberTest@33065d67]" started-at="2024-10-08T13:16:46 GMT+01:00" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-10-08T13:17:08 GMT+01:00" duration-ms="21345" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Check login with valid e-mail and invalid password"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["login functionality"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testng.runner.RunCucumberTest@33065d67]" started-at="2024-10-08T13:17:08 GMT+01:00" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-10-08T13:17:30 GMT+01:00" duration-ms="22614" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Check login with empty credentials"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["login functionality"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testng.runner.RunCucumberTest@33065d67]" started-at="2024-10-08T13:17:30 GMT+01:00" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-10-08T13:18:13 GMT+01:00" duration-ms="43236" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Check logged in user can change password"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Change Password"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testng.runner.RunCucumberTest@33065d67]" started-at="2024-10-08T13:18:13 GMT+01:00" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-10-08T13:18:34 GMT+01:00" duration-ms="21062" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Check user can not login with old password after change it"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Change Password"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testng.runner.RunCucumberTest@33065d67]" started-at="2024-10-08T13:18:34 GMT+01:00" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-10-08T13:19:08 GMT+01:00" duration-ms="33823" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Try to enter different confirm password"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Change Password"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testng.runner.RunCucumberTest@33065d67]" started-at="2024-10-08T13:19:08 GMT+01:00" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-10-08T13:19:37 GMT+01:00" duration-ms="28790" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Search Product with Auto-Suggestion"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Search For Product"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testng.runner.RunCucumberTest@33065d67]" started-at="2024-10-08T13:19:37 GMT+01:00" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-10-08T13:20:10 GMT+01:00" duration-ms="32740" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testng.runner.RunCucumberTest@33065d67]" started-at="2024-10-10T19:59:50 GMT+01:00" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-10-10T20:00:01 GMT+01:00" duration-ms="11548" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -390,10 +92,52 @@ at ✽.user is navigated to home page(file:///C:/Users/hedi/eclipse-workspace/Au
               </value>
             </param>
           </params>
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//form[@id='search_mini_form']/descendant::input[@class='input-text']"}
+  (Session info: chrome=129.0.6668.90)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.25.0', revision: '8a8aea2337'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.24'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [ece7a2751e45f80e5e90518f2e1106b2, findElement {value=//form[@id='search_mini_form']/descendant::input[@class='input-text'], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 129.0.6668.90, chrome: {chromedriverVersion: 129.0.6668.100 (cf58cba358d..., userDataDir: C:\Users\hedi\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50309}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50309/devtoo..., se:cdpVersion: 129.0.6668.90, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: ece7a2751e45f80e5e90518f2e1106b2]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//form[@id='search_mini_form']/descendant::input[@class='input-text']"}
+  (Session info: chrome=129.0.6668.90)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.25.0', revision: '8a8aea2337'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.24'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [ece7a2751e45f80e5e90518f2e1106b2, findElement {value=//form[@id='search_mini_form']/descendant::input[@class='input-text'], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 129.0.6668.90, chrome: {chromedriverVersion: 129.0.6668.100 (cf58cba358d..., userDataDir: C:\Users\hedi\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50309}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50309/devtoo..., se:cdpVersion: 129.0.6668.90, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: ece7a2751e45f80e5e90518f2e1106b2
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+at stepDefinitions.AutoSuggestSearcAndAddToCartStep.user_is_on_home_page(AutoSuggestSearcAndAddToCartStep.java:24)
+at ✽.user is on home page(file:///C:/Users/hedi/eclipse-workspace/AutomationWebTest_POM_V1/BDDProject/src/test/resources/Features/4.searchAndAddProductToCart.feature:4)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testng.runner.RunCucumberTest@33065d67]" started-at="2024-10-08T13:20:10 GMT+01:00" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-10-08T13:20:36 GMT+01:00" duration-ms="26600" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testng.runner.RunCucumberTest@33065d67]" started-at="2024-10-10T20:00:01 GMT+01:00" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-10-10T20:00:12 GMT+01:00" duration-ms="11018" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -406,26 +150,52 @@ at ✽.user is navigated to home page(file:///C:/Users/hedi/eclipse-workspace/Au
               </value>
             </param>
           </params>
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//form[@id='search_mini_form']/descendant::input[@class='input-text']"}
+  (Session info: chrome=129.0.6668.90)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.25.0', revision: '8a8aea2337'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.24'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [9930cbbf3f5ba49d07ca8f75137987d0, findElement {value=//form[@id='search_mini_form']/descendant::input[@class='input-text'], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 129.0.6668.90, chrome: {chromedriverVersion: 129.0.6668.100 (cf58cba358d..., userDataDir: C:\Users\hedi\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50334}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50334/devtoo..., se:cdpVersion: 129.0.6668.90, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 9930cbbf3f5ba49d07ca8f75137987d0]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//form[@id='search_mini_form']/descendant::input[@class='input-text']"}
+  (Session info: chrome=129.0.6668.90)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.25.0', revision: '8a8aea2337'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.24'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [9930cbbf3f5ba49d07ca8f75137987d0, findElement {value=//form[@id='search_mini_form']/descendant::input[@class='input-text'], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 129.0.6668.90, chrome: {chromedriverVersion: 129.0.6668.100 (cf58cba358d..., userDataDir: C:\Users\hedi\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50334}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50334/devtoo..., se:cdpVersion: 129.0.6668.90, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 9930cbbf3f5ba49d07ca8f75137987d0
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+at stepDefinitions.AutoSuggestSearcAndAddToCartStep.user_is_on_home_page(AutoSuggestSearcAndAddToCartStep.java:24)
+at ✽.user is on home page(file:///C:/Users/hedi/eclipse-workspace/AutomationWebTest_POM_V1/BDDProject/src/test/resources/Features/4.searchAndAddProductToCart.feature:4)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testng.runner.RunCucumberTest@33065d67]" started-at="2024-10-08T13:20:36 GMT+01:00" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-10-08T13:21:42 GMT+01:00" duration-ms="65136" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Check User Can Order Product"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Product Order Fonctionalty"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:testng.runner.RunCucumberTest@33065d67]" started-at="2024-10-08T13:21:42 GMT+01:00" name="tearDownClass" finished-at="2024-10-08T13:21:42 GMT+01:00" duration-ms="389" status="PASS">
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:testng.runner.RunCucumberTest@33065d67]" started-at="2024-10-10T20:00:12 GMT+01:00" name="tearDownClass" finished-at="2024-10-10T20:00:13 GMT+01:00" duration-ms="390" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->
