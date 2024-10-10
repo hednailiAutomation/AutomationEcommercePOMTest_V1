@@ -27,7 +27,7 @@ public class ChangePasswordSteps extends BasePage {
 	@And("hits on login button")
 	public void clickLogin() throws InterruptedException {
 		lp.Login();
-		Thread.sleep(4000);
+		Thread.sleep(2000);
 	}
 
 	@And("select my account")

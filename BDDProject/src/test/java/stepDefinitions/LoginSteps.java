@@ -47,19 +47,19 @@ public class LoginSteps extends BasePage {
 		lp.submitEmptyUsername(username);
 		lp.submitEmptyPassword(password);
 		lp.Login();
-		Thread.sleep(2000);
+		Thread.sleep(3000);
 	}
 
 
 	@Then("user is navigated to home page")
 	public void succesLogin() throws InterruptedException {
-		Thread.sleep(7000);
+		Thread.sleep(4000);
 		Assert.assertTrue(driver.findElement(By.className("logged-in")).isDisplayed());
 	}
 
 	@Then("an email error message should be displayed")
 	public void an_email_error_message_should_be_displayed() throws InterruptedException {
-		Thread.sleep(4000);
+		Thread.sleep(3000);
 		Assert.assertTrue(driver.findElement(By.xpath("//form[@class='form form-login']/descendant::div[@id='email-error']")).getText().contains("Please enter a valid email address"));
 	}
 
