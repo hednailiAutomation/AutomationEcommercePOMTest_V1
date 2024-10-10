@@ -8,7 +8,6 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
 
 
 public class TestBase {
